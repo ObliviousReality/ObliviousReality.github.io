@@ -12,9 +12,10 @@
         }
 
         button {
-            border: none;
+            border: 0;
             color: black;
             background-color: purple;
+            text-decoration: none;
             padding: 10px 5px;
             font-size: 36px;
             cursor: pointer;
@@ -25,7 +26,7 @@
         }
 
         button:hover {
-            background-color: beige;
+            background-color: white;
         }
 
         .center {
@@ -51,6 +52,8 @@
             border-spacing: 0;
             border: 0px;
             padding-right: 25px;
+            padding-top: 0;
+            padding-bottom: 0;
         }
     </style>
 </head>
@@ -60,15 +63,24 @@
         <img src="imgs/banner.png" alt="banner" onclick="document.location = 'index.html'">
     </div>
 
-    <div style = "background-color: purple;">
+    <div style="background-color: purple; border-style: solid; border-width: 0px; border-color: black; padding: 0;">
         <table>
             <tr>
-                <th><button type=" button" onclick="document.location = 'index.html'">Home</button></th>
+                <th><button type=" button" onclick="document.location = 'index.html'"><i>Home</i></button></th>
                 <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
                 <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
-                <th><button type=" button" onclick="document.location = 'contact.html'">Contact</button></th>
+                <th><button type=" button rightButton" onclick="document.location = 'contact.html'">Contact</button>
+                </th>
             </tr>
         </table>
+    </div>
+
+    <div class="center">
+        <img src="imgs/construction.jpg" alt="construction">
+        <p>Website still under construction.</p>
+        <p>construction is quite slow</p>
+        <p>will be completed before hs2 though</p>
+        <p>he really should be wearing a hard hat</p>
     </div>
 
 

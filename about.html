@@ -2,13 +2,14 @@
 <html>
 
 <head>
-    <title>Information</title>
+    <title>About</title>
     <style>
         body {
             background-color: rgb(18, 18, 18);
             text-align: center;
             margin: 0;
             padding: 0;
+
         }
 
         button {
@@ -51,6 +52,24 @@
             background-color: purple;
 
         }
+
+        #main {
+            font-size: 0;
+            background-color: white;
+            width: 80%;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: Arial;
+
+        }
+
+        #main>div {
+            display: inline-block;
+            font-size: 20px;
+
+        }
     </style>
 </head>
 
@@ -60,10 +79,16 @@
             <tr>
                 <th><button type=" button" onclick="document.location = 'index.html'">Home</button></th>
                 <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
-                <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
+                <th><button type=" button" onclick="document.location = 'about.html'"><i>About</i></button></th>
                 <th><button type=" button" onclick="document.location = 'contact.html'">Contact</button></th>
             </tr>
         </table>
+    </div>
+    <div id="main" >
+        <div>
+            <h2>The Personal Site of Tom Litherland</h2>
+            <p>Hi! I'm Tom and I'm really boring.<br>This website isn't finished yet!<br>Could you tell?</p>
+        </div>
     </div>
 </body>
 
