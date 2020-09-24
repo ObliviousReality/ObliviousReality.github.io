@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>A Slightly Oblivious Website</title>
+    <title>Information</title>
     <style>
         body {
             background-color: rgb(18, 18, 18);
@@ -28,13 +28,6 @@
             background-color: beige;
         }
 
-        .center {
-            display: block;
-            margin: auto;
-            text-align: center;
-
-        }
-
         table,
         tr {
             margin-left: auto;
@@ -52,26 +45,26 @@
             border: 0px;
             padding-right: 25px;
         }
+
+        .banner {
+            padding: 0px;
+            background-color: purple;
+
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <img src="imgs/banner.png" alt="banner" onclick="document.location = 'index.html'">
-    </div>
-
-    <div style = "background-color: purple;">
+    <div class="banner">
         <table>
             <tr>
                 <th><button type=" button" onclick="document.location = 'index.html'">Home</button></th>
-                <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
-                <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
-                <th><button type=" button" onclick="document.location = 'contact.html'">Contact</button></th>
+                <th><button type=" button" onclick="document.location = 'info.html'">Blog</button></th>
+                <th><button type=" button" onclick="document.location = 'info.html'">About</button></th>
+                <th><button type=" button" onclick="document.location = 'info.html'">Contact</button></th>
             </tr>
         </table>
     </div>
-
-
 </body>
 
 </html>
