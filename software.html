@@ -5,10 +5,11 @@
     <title>Information</title>
     <style>
         body {
-            background-color: rgb(18, 18, 18);
+            /* background-color: rgb(18, 18, 18); */
             text-align: center;
             margin: 0;
             padding: 0;
+            font-family: Arial;
         }
 
         button {
@@ -39,6 +40,26 @@
             padding: 0px;
         }
 
+        .gameTable {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            padding: 0px;
+            width: 100%;
+        }
+
+        td {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            width: 33%;
+        }
+
         th {
             border-collapse: collapse;
             border-spacing: 0;
@@ -59,10 +80,41 @@
         <table>
             <tr>
                 <th><button type=" button" onclick="document.location = 'index.html'">Home</button></th>
-                <th><button type="button" onclick="document.location = 'software.html'">Software</button></th>
+                <th><button type="button" onclick="document.location = 'software.html'"><i>Software</i></button></th>
                 <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
                 <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
                 <th><button type=" button" onclick="document.location = 'contact.html'">Contact</button></th>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table class="gameTable">
+            <tr>
+                <td>
+                    <h3>Tom's Epic Chess</h3>
+                    <img src="imgs/epicChess.png">
+                </td>
+                <td>
+                    <h3>Tom's Epic Monopoly</h3>
+                    <img src="imgs/epicMonopoly.png" style="width:384px; height: 216px;">
+                </td>
+                <td>
+                    <h3>Tom's Epic Hopper</h3>
+                    <img src="imgs/epicHopper.png" style="width:200px; height: 200px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Tom's Epic 8-Ball Pool</h3>
+                    <p>(picture pending)</p>
+                </td>
+                <td>
+                    <h3>To Be Completed</h3>
+                </td>
+                <td>
+                    <h3>Who Knows</h3>
+                </td>
             </tr>
         </table>
     </div>
