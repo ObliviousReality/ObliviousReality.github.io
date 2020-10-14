@@ -190,10 +190,13 @@
         </table>
     </div>
 
+    <br>
     <div class="slideShow">
         <div class="slide fade">
             <div class="numberText">1 / 4</div>
-            <img src="imgs/carousel/1.png" style="width: 100%;">
+            <a href="epicChess.html">
+                <img src="imgs/carousel/1.png" style="width: 100%;">
+            </a>
             <div class="text">Now Available!</div>
         </div>
         <div class="slide fade">
@@ -257,7 +260,7 @@
             dots[index - 1].className += " active";
         }
 
-        function auto(){
+        function auto() {
             console.log(index);
             index++;
             switchSlide();
