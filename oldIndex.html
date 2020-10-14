@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A Slightly Oblivious Website</title>
+    <link rel="icon" href="imgs/logoSmall.png">
+    <style>
+        body {
+            background-color: rgb(18, 18, 18);
+            /* text-align: center; */
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            overflow-x: hidden;
+        }
+
+        button {
+            border: 0;
+            color: black;
+            background-color: purple;
+            text-decoration: none;
+            padding: 10px 5px;
+            font-size: 36px;
+            cursor: pointer;
+            outline: none;
+            display: block;
+            float: left;
+            transition-duration: 0.4s;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+        .center {
+            display: block;
+            margin: auto;
+            text-align: center;
+
+        }
+
+        table,
+        tr {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0px;
+            padding: 0px;
+        }
+
+        th {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0px;
+            padding-right: 25px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        td {
+            vertical-align: top;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* img {
+            pointer-events: none
+        } */
+
+        .mainText {
+            background-color: white;
+            height: 310px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="index.html">
+            <img src="imgs/banner.png" alt="banner" onclick="document.location = 'index.html'">
+        </a>
+    </div>
+
+    <div style="background-color: purple; border-style: solid; border-width: 0px; border-color: black; padding: 0;">
+        <table>
+            <tr>
+                <th><button type=" button" onclick="document.location = 'index.html'"><i>Home</i></button></th>
+                <th><button type="button" onclick="document.location = 'software.html'">Software</button></th>
+                <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
+                <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
+                <th><button type=" button rightButton" onclick="document.location = 'contact.html'">Contact</button>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table style="width: 100%; height:500px; vertical-align: top;">
+            <tr>
+                <td style="width:33%; background-color: rgb(55, 71, 79);">
+                    <div style="font-size: 0; background-color: #1e1e1e;">
+                        <img src="imgs/newsBanner.png">
+                    </div>
+                    <p>nothing much really happening right now</p>
+                </td>
+                <td style="width:33%; background-color: white;">
+                    <img src="imgs/construction.jpg" alt="construction" style="width: 634px; margin: 0%;">
+                    <div class="mainText">
+                        <p style="margin: 0%; padding-top: 10px;"><b>Website still under construction.</b></p>
+                        <p>construction is quite slow</p>
+                        <p>will be completed before hs2 though</p>
+                        <p>he really should be wearing a hard hat</p>
+                    </div>
+                </td>
+                <td style="width:33%; background-color: #292F33;">
+                    <div style="font-size: 0; background-color: #1e1e1e;">
+                        <img src="imgs/twitterBanner.png">
+                    </div>
+                    <!-- <a class="twitter-timeline" data-lang="en" data-width="500" data-height="750" data-theme="dark"
+                        href="https://twitter.com/TsarOblivious?ref_src=twsrc%5Etfw">Tweets by TsarOblivious</a> -->
+
+                    <a class="twitter-timeline" data-lang="en" data-width="634" data-height="750" data-theme="dark"
+                        href="https://twitter.com/BarackObama?ref_src=twsrc%5Etfw">Tweets by BarackObama</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

@@ -64,21 +64,117 @@
             padding: 0;
             margin: 0;
         }
-
-        img {
-            pointer-events: none
+    </style>
+    <style>
+        * {
+            box-sizing: border-box
         }
 
-        .mainText {
-            background-color: white;
-            height: 310px;
+        .slideShow {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .previous,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            /* border-radius: 0 3px 3px 0; */
+            /* border-radius: 50%; */
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            /* border-radius: 3px 0 0 3px; */
+        }
+
+        .previous:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .numberText {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <img src="imgs/banner.png" alt="banner" onclick="document.location = 'index.html'">
+    <div style="width: 100%;">
+        <a href="index.html">
+            <img src="imgs/banner.png" alt="banner" onclick="document.location = 'index.html'">
+        </a>
     </div>
 
     <div style="background-color: purple; border-style: solid; border-width: 0px; border-color: black; padding: 0;">
@@ -94,40 +190,77 @@
         </table>
     </div>
 
-    <div>
-        <table style="width: 100%; height:500px; vertical-align: top;">
-            <tr>
-                <td style="width:33%; background-color: rgb(55, 71, 79);">
-                    <div style="font-size: 0; background-color: #1e1e1e;">
-                        <img src="imgs/newsBanner.png">
-                    </div>
-                    <p>nothing much really happening right now</p>
-                </td>
-                <td style="width:33%">
-                    <img src="imgs/construction.jpg" alt="construction" style="width: 634px; margin: 0%;">
-                    <div class="mainText" >
-                        <p style="margin: 0%; padding-top: 10px;"><b>Website still under construction.</b></p>
-                        <p>construction is quite slow</p>
-                        <p>will be completed before hs2 though</p>
-                        <p>he really should be wearing a hard hat</p>
-                    </div>
-                </td>
-                <td style="width:33%">
-                    <div style="font-size: 0; background-color: #1e1e1e;">
-                        <img src="imgs/twitterBanner.png">
-                    </div>
-                    <!-- <a class="twitter-timeline" data-lang="en" data-width="500" data-height="750" data-theme="dark"
-                        href="https://twitter.com/TsarOblivious?ref_src=twsrc%5Etfw">Tweets by TsarOblivious</a> -->
+    <div class="slideShow">
+        <div class="slide fade">
+            <div class="numberText">1 / 4</div>
+            <img src="imgs/carousel/1.png" style="width: 100%;">
+            <div class="text">Sample Text</div>
+        </div>
+        <div class="slide fade">
+            <div class="numberText">2 / 4</div>
+            <img src="imgs/carousel/2.png" style="width: 100%;">
+            <div class="text">Sample Text</div>
+        </div>
+        <div class="slide fade">
+            <div class="numberText">3 / 4</div>
+            <img src="imgs/carousel/3.png" style="width: 100%;">
+            <div class="text">Sample Text</div>
+        </div>
+        <div class="slide fade">
+            <div class="numberText">4 / 4</div>
+            <img src="imgs/carousel/4.png" style="width: 100%;">
+            <div class="text">Sample Text</div>
+        </div>
 
-                    <a class="twitter-timeline" data-lang="en" data-width="634" data-height="750" data-theme="dark"
-                        href="https://twitter.com/BarackObama?ref_src=twsrc%5Etfw">Tweets by BarackObama</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </td>
-            </tr>
-        </table>
+        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+
+    </div>
+    <br>
+    <div style="text-align: center;">
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot" onclick="setSlide(3)"></span>
+        <span class="dot" onclick="setSlide(4)"></span>
     </div>
 
+    <script>
+        var index = 1;
+        switchSlide(index);
+
+        function changeSlide(n) {
+            switchSlide(index += n);
+        }
+        function setSlide(n) {
+            switchSlide(index = n);
+        }
+        function switchSlide(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                index = 1;
+            }
+            if (n < 1) {
+                index = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[index - 1].style.display = "block";
+            dots[index - 1].className += " active";
+            index++;
+            if (index==5){
+                index = 1;
+            }
+            setTimeout(switchSlide, 3000);
+
+        }
+    </script>
 
 </body>
 

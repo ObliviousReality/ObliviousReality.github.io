@@ -2,13 +2,14 @@
 <html>
 
 <head>
-    <title>Information</title>
+    <title>Tom's Epic Chess</title>
     <link rel="icon" href="imgs/logoSmall.png">
     <style>
         body {
             background-color: rgb(18, 18, 18);
             /* text-align: center; */
             margin: 0;
+            margin-top: 60px;
             padding: 0;
             font-family: Arial;
         }
@@ -53,8 +54,12 @@
         }
 
         .banner {
+            overflow: hidden;
             padding: 0px;
             background-color: purple;
+            position:fixed;
+            top: 0;
+            width: 100%;
 
         }
 
@@ -96,7 +101,7 @@
 </head>
 
 <body>
-    <div class="banner">
+    <div class="banner" style="width: 100%;">
         <table>
             <tr>
                 <th><button type=" button" onclick="document.location = 'index.html'">Home</button></th>
@@ -112,7 +117,7 @@
         <p class="title"><b>Tom's Epic Chess</b></p>
     </div>
     <div>
-        <table style="width: 100%; margin-top: 0px;">
+        <table style="width: 100%;">
             <tr>
                 <th class="screenShots" ">
                     <h3>Screenshots:</h3>
@@ -129,7 +134,7 @@
                     <p>pics</p>
                 </td>
                 <td class="info">
-                    <div style="display: inline-block; text-align: left;">
+                    <div style="display: inline-block; text-align: left;height: 5000px;">
                         <p>Tom's Epic Chess was the first game I ever made. Did you ever hear the tragedy of Darth
                             Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s
                             a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could

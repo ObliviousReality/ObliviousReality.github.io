@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>Software</title>
+    <title>Information</title>
     <link rel="icon" href="imgs/logoSmall.png">
     <style>
         body {
-            /* background-color: rgb(18, 18, 18); */
-            text-align: center;
+            background-color: rgb(18, 18, 18);
+            /* text-align: center; */
             margin: 0;
             padding: 0;
             font-family: Arial;
@@ -41,28 +41,6 @@
             padding: 0px;
         }
 
-
-        .gameTable {
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            border-collapse: collapse;
-            border-spacing: 0;
-            border-width: 2px;
-            border-style: solid;
-            border-color: black;
-            padding: 0px;
-            width: 100%;
-        }
-
-        td {
-            border-width: 2px;
-            border-style: solid;
-            border-color: black;
-            width: 33%;
-            vertical-align: top;
-        }
-
         th {
             border-collapse: collapse;
             border-spacing: 0;
@@ -70,18 +48,50 @@
             padding-right: 25px;
         }
 
-        h1 {
-            background-color: red;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-top: 15px;
-            padding-bottom: 15px;
+        td {
+            vertical-align: top;
         }
+
 
         .banner {
             padding: 0px;
             background-color: purple;
 
+        }
+
+        .main {
+            background-color: white;
+        }
+
+        .title {
+            background-color: red;
+            font-size: 40px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .screenShots {
+            width: 20%;
+            background-color: burlywood;
+            border-right-color: black;
+            border-right-width: 2px;
+            border-right-style: solid;
+        }
+
+        .info {
+            width: 60%;
+            background-color: white;
+            border-right-color: black;
+            border-right-width: 2px;
+            border-right-style: solid;
+        }
+
+        .download {
+            width: 20%;
+            background-color: blueviolet;
         }
     </style>
 </head>
@@ -99,47 +109,38 @@
         </table>
     </div>
 
+    <div class="title">
+        <p class="title"><b>Tom's Epic Hopper</b></p>
+    </div>
     <div>
-        <h1>Games:</h1>
-        <table class="gameTable">
+        <table style="width: 100%; margin-top: 0px;">
             <tr>
-                <td>
-                    <a href="epicChess.html">
-                        <h3>Tom's Epic Chess</h3>
-                        <img src="imgs/epicChess.png">
-                    </a>
-                </td>
-                <td>
-                    <a href="epicMonopoly.html">
-                        <h3>Tom's Epic Monopoly</h3>
-                        <img src="imgs/epicMonopoly.png" style="width:384px; height: 216px;">
-                    </a>
-                </td>
-                <td>
-                    <a href="epicHopper.html">
-                        <h3>Tom's Epic Hopper</h3>
-                        <img src="imgs/epicHopper.png" style="width:250px; height: 250px;">
-                    </a>
-                </td>
+                <th class="screenShots" ">
+                    <h3>Screenshots:</h3>
+                </th>
+                <th class=" info" ">
+                    <h2>About:</h2>
+                </th>
+                <th class=" download"">
+                    <h3>Download:</h3>
+                </th>
             </tr>
             <tr>
-                <td>
-                    <a href="imgs/epicHopper.png">
-                        <h3>Tom's Epic 8-Ball Pool</h3>
-                        <p>(picture pending)</p>
+                <td class="screenShots">
+                    <p>pics</p>
+                </td>
+                <td class="info">
+                    <p>My first major Java project.</p>
+                </td>
+                <td class="download">
+                    <a href="lib/Hopper.zip" download="Hopper">
+                        <img src="imgs/downloadButton.png">
                     </a>
-                </td>
-                <td>
-                    <h3>To Be Completed</h3>
-                </td>
-                <td>
-                    <h3>Who Knows</h3>
+                    <p>Click here to Download</p>
                 </td>
             </tr>
         </table>
-    </div>
-    <div>
-        <h1>Software:</h1>
+
     </div>
 </body>
 
