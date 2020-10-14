@@ -194,17 +194,17 @@
         <div class="slide fade">
             <div class="numberText">1 / 4</div>
             <img src="imgs/carousel/1.png" style="width: 100%;">
-            <div class="text">Sample Text</div>
+            <div class="text">Now Available!</div>
         </div>
         <div class="slide fade">
             <div class="numberText">2 / 4</div>
             <img src="imgs/carousel/2.png" style="width: 100%;">
-            <div class="text">Sample Text</div>
+            <div class="text">Under Construction</div>
         </div>
         <div class="slide fade">
             <div class="numberText">3 / 4</div>
             <img src="imgs/carousel/3.png" style="width: 100%;">
-            <div class="text">Sample Text</div>
+            <div class="text">Not Finished Yet</div>
         </div>
         <div class="slide fade">
             <div class="numberText">4 / 4</div>
@@ -227,22 +227,24 @@
 
     <script>
         var index = 1;
-        switchSlide(index);
-
+        switchSlide();
+        var x = setInterval(auto, 10000);
         function changeSlide(n) {
-            switchSlide(index += n);
+            index += n;
+            switchSlide();
         }
         function setSlide(n) {
-            switchSlide(index = n);
+            index = n;
+            switchSlide();
         }
-        function switchSlide(n) {
+        function switchSlide() {
             var i;
             var slides = document.getElementsByClassName("slide");
             var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
+            if (index > slides.length) {
                 index = 1;
             }
-            if (n < 1) {
+            if (index < 1) {
                 index = slides.length;
             }
             for (i = 0; i < slides.length; i++) {
@@ -253,12 +255,12 @@
             }
             slides[index - 1].style.display = "block";
             dots[index - 1].className += " active";
-            index++;
-            if (index==5){
-                index = 1;
-            }
-            setTimeout(switchSlide, 3000);
+        }
 
+        function auto(){
+            console.log(index);
+            index++;
+            switchSlide();
         }
     </script>
 
