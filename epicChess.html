@@ -54,10 +54,10 @@
         }
 
         .banner {
-            overflow: hidden;
+            /* overflow: hidden; */
             padding: 0px;
             background-color: purple;
-            position:fixed;
+            position: fixed;
             top: 0;
             width: 100%;
 
@@ -75,27 +75,58 @@
             padding-top: 10px;
             padding-bottom: 10px;
             text-align: center;
-        }
-
-        .screenShots {
-            width: 20%;
-            background-color: burlywood;
-            border-right-color: black;
-            border-right-width: 2px;
-            border-right-style: solid;
+            position: fixed;
+            top: 64px;
+            width: 100%;
         }
 
         .info {
+            width: 20%;
+            background-color: lightskyblue;
+            border-right-color: black;
+            border-right-width: 2px;
+            border-right-style: solid;
+            /* padding-top: 64px; */
+        }
+
+        .about {
             width: 60%;
             background-color: white;
             border-right-color: black;
             border-right-width: 2px;
             border-right-style: solid;
+            /* padding-top: 64px; */
         }
 
         .download {
             width: 20%;
             background-color: blueviolet;
+
+        }
+
+        .infoTable {
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            width: 80%;
+            text-align: left;
+        }
+
+        .columnLeft {
+            width: 50%;
+            background-color: skyblue;
+        }
+
+        .columnRight {
+            width: 50%;
+            background-color: skyblue;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
     </style>
 </head>
@@ -119,42 +150,106 @@
     <div>
         <table style="width: 100%;">
             <tr>
-                <th class="screenShots" ">
-                    <h3>Screenshots:</h3>
+                <th class="info" style="padding-top: 64px;">
+                    <h3>Information:</h3>
                 </th>
-                <th class=" info" ">
+                <th class=" about" style="padding-top: 64px;">
                     <h2>About:</h2>
                 </th>
-                <th class=" download"">
+                <th class=" download" style="padding-top: 64px;text-align: center;">
                     <h3>Download:</h3>
                 </th>
             </tr>
             <tr>
-                <td class="screenShots">
-                    <p>pics</p>
-                </td>
                 <td class="info">
-                    <div style="display: inline-block; text-align: left;height: 5000px;">
-                        <p>Tom's Epic Chess was the first game I ever made. Did you ever hear the tragedy of Darth
-                            Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s
-                            a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could
-                            use the Force to influence
-                            the midichlorians to create life… He had such a knowledge of the dark side that he could
-                            even keep the ones he cared
-                            about from dying. The dark side of the Force is a pathway to many abilities some consider to
-                            be unnatural. He became so
-                            powerful… the only thing he was afraid of was losing his power, which eventually, of course,
-                            he did. Unfortunately, he
-                            taught his apprentice everything he knew, then his apprentice killed him in his sleep.
-                            Ironic. He could save others from
-                            death, but not himself.</p>
+                    <table class="infoTable">
+                        <tr class="infoTable">
+                            <th class="infoTable columnLeft">
+                                <p>Language</p>
+                            </th>
+                            <td class="infoTable columnRight">
+                                <p>Python</p>
+                            </td>
+                        </tr>
+                        <tr class="infoTable">
+                            <th class="infoTable columnLeft">
+                                <p>Created:</p>
+                            </th>
+                            <td class="infoTable columnRight">
+                                <p>2018</p>
+                            </td>
+                        </tr>
+                        <tr class="infoTable">
+                            <th class="infoTable columnLeft">
+                                <p>Time Taken:</p>
+                            </th>
+                            <td class="infoTable columnRight">
+                                <p>~6 Months</p>
+                            </td>
+                        </tr>
+                        <tr class="infoTable">
+                            <th class="infoTable columnLeft">
+                                <p>Additional Help:</p>
+                            </th>
+                            <td class="infoTable columnRight">
+                                <p>Oli for graphics.<br>Jesus/Google for programming.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="about">
+                    <div style="display: inline-block; text-align: left; line-height: 1.2; max-width: 90%;">
+                        <p>Tom's Epic Chess was the first game I ever made. It was an assignment for my A-Level computer
+                            science project, with no real design specifications other than it had to be built in Python.
+                            At the time I didn't know how to implement Object Oriented Programming into Python (or any
+                            language for that matter), so the whole project is procedural, and 99% of it is done in one
+                            file. It's 1200 lines long, vaguely commented and I have no idea how it actually works.
+                            Surprisingly, it
+                            does actually work, so I don't question it, don't touch it and
+                            I definitely don't look at it for too long - You never know, there may be a crazed murderer
+                            on line 947. He
+                            may mistake you for his target as no one bothered to tell him what the real target looked
+                            like. Bring a brace, you may be able to scare it off.
+                            <br><br></p>
+                        <img src="imgs/epicChess1.png" class="center">
+                        <p>
+                            The brief of the project was simple: make something in Python. How this escalated into
+                            perhaps the best/worst game of chess ever made is lost to time. It's made using Python's
+                            Pygame library, a fairly powerful library for creating 2D graphics in a window, and one I
+                            quite like as it has extensive documentation on <a
+                                href="https://www.pygame.org/docs/">pygame.org</a>.
+                            <br><br>
+                            The graphics, which for their time were awful, are a clear insight into my mind - complete
+                            utter laziness. The only 'quality' graphics are the chess pieces, which, unsurprisingly, are
+                            the only bits I didn't make - they were kindly donated by <a href="https://olihewi.com/">
+                                Oliver Hewison</a>, who was pretending to be my 'professional' client for this task.
+                            Most of the UI text is yellow because I accidentally set that as the default colour for text
+                            and then never changed it.
+                            <br><br>
+                            <img src="imgs/epicChess2.png" class="center">
+                            <br>
+                            The earlier versions of the program had music, originally the Kahoot theme, as suggested by
+                            Oli, but I later changed it to the Skyrim Theme, to better complement the gory pawn on pawn
+                            0 frame unanimated combat the game has. This was then removed from the final version to
+                            'clean' the program up a bit, along with the original end screen image, which was from one
+                            of the very few game worse than <i>Tom's Epic Chess</i>, <a
+                                href="https://en.wikipedia.org/wiki/Big_Rigs:_Over_the_Road_Racing">Big Rigs: Over the
+                                Road </a><a
+                                href="https://crappygames.miraheze.org/wiki/Big_Rigs:_Over_the_Road_Racing">Racing</a>.
+                            <br><br>
+                            <img src="imgs/epicChess3.png" class="center"><br>
+                            So that's Tom's Epic Chess. Never coming to a store near you.
+                        </p>
                     </div>
                 </td>
                 <td class="download">
                     <a href="lib/Tom's Epic Chess.zip" download="epicChess">
                         <img src="imgs/downloadButton.png">
                     </a>
-                    <p>Click here to download</p>
+                    <p style="width: 90%; line-height: 1.2; text-align: center; display: inline-block;">Requirments:<br>
+                        The .exe file can be run using Windows/Linux<br>
+                        Source code access requires Python, but execution requires Python's Pygame library, download <a
+                            href="https://www.pygame.org/wiki/GettingStarted">here</a>.</p>
                 </td>
             </tr>
         </table>
