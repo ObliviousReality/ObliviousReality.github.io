@@ -10,7 +10,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            font-family: Arial;
+            font-family: Bahnschrift;
 
         }
 
@@ -25,6 +25,7 @@
             display: block;
             float: left;
             transition-duration: 0.4s;
+            font-family: Bahnschrift, sans-serif;
         }
 
         button:hover {
@@ -76,13 +77,21 @@
             margin-top: 0px;
             margin-bottom: 0px;
             padding-top: 15px;
-            padding-bottom: 15px;
+            padding-bottom: 8px;
         }
 
         .banner {
             padding: 0px;
             background-color: purple;
 
+        }
+
+        .description {
+            background-color: red;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-bottom: 3px;
         }
     </style>
 </head>
@@ -99,9 +108,31 @@
             </tr>
         </table>
     </div>
-
     <div>
-        <h1>Games:</h1>
+        <h1>Elite Series</h1>
+        <p class="description">The stuff I'm proud of!</p>
+        <table class="gameTable">
+            <tr>
+                <td>
+                    <a>
+                        <h3>Epic Chess V2</h3>
+                        <p>(picture pending)</p>
+                    </a>
+                </td>
+                <td>
+                    <h3>CTRL-C, CTRL-V</h3>
+                    <p>(picture pending)</p>
+                </td>
+                <td>
+                    <h3>Who Knows</h3>
+                    <p>(picture pending)</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h1>Tom's Epic Series:</h1>
+        <p class="description">My first ventures into Game Development.</p>
         <table class="gameTable">
             <tr>
                 <td>
@@ -123,15 +154,21 @@
                     </a>
                 </td>
             </tr>
+        </table>
+    </div>
+    <div>
+        <h1>University Series</h1>
+        <p class="description">Games and software developed at University.</p>
+        <table class="gameTable">
             <tr>
                 <td>
                     <a>
-                        <h3>To Be Completed</h3>
+                        <h3>Tom's Epic 8-Ball Pool</h3>
                         <p>(picture pending)</p>
                     </a>
                 </td>
                 <td>
-                    <h3>To Be Completed</h3>
+                    <h3>Demon Dash</h3>
                     <p>(picture pending)</p>
                 </td>
                 <td>
@@ -141,9 +178,7 @@
             </tr>
         </table>
     </div>
-    <div>
-        <h1>Software:</h1>
-    </div>
+
 </body>
 
 </html>

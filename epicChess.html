@@ -11,7 +11,7 @@
             margin: 0;
             margin-top: 60px;
             padding: 0;
-            font-family: Arial;
+            font-family: Bahnschrift, sans-serif;
         }
 
         button {
@@ -60,7 +60,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-
+            z-index: 100;
         }
 
         .main {
@@ -78,6 +78,7 @@
             position: fixed;
             top: 64px;
             width: 100%;
+            z-index: 100;
         }
 
         .info {
@@ -96,6 +97,7 @@
             border-right-width: 2px;
             border-right-style: solid;
             /* padding-top: 64px; */
+
         }
 
         .download {
@@ -127,6 +129,10 @@
             margin-left: auto;
             margin-right: auto;
             width: 50%;
+        }
+
+        .zoom:hover {
+            transform: scale(2);
         }
     </style>
 </head>
@@ -210,8 +216,9 @@
                             on line 947. He
                             may mistake you for his target as no one bothered to tell him what the real target looked
                             like. Bring a brace, you may be able to scare it off.
-                            <br><br></p>
-                        <img src="imgs/epicChess1.png" class="center">
+                            <br><br>
+                        </p>
+                        <img src="imgs/epicChess1.png" class="center zoom">
                         <p>
                             The brief of the project was simple: make something in Python. How this escalated into
                             perhaps the best/worst game of chess ever made is lost to time. It's made using Python's
@@ -226,7 +233,7 @@
                             Most of the UI text is yellow because I accidentally set that as the default colour for text
                             and then never changed it.
                             <br><br>
-                            <img src="imgs/epicChess2.png" class="center">
+                            <img src="imgs/epicChess2.png" class="center zoom">
                             <br>
                             The earlier versions of the program had music, originally the Kahoot theme, as suggested by
                             Oli, but I later changed it to the Skyrim Theme, to better complement the gory pawn on pawn
@@ -237,7 +244,7 @@
                                 Road </a><a
                                 href="https://crappygames.miraheze.org/wiki/Big_Rigs:_Over_the_Road_Racing">Racing</a>.
                             <br><br>
-                            <img src="imgs/epicChess3.png" class="center"><br>
+                            <img src="imgs/epicChess3.png" class="center zoom"><br>
                             So that's Tom's Epic Chess. Never coming to a store near you.
                         </p>
                     </div>

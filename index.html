@@ -4,18 +4,75 @@
 <head>
     <title>A Slightly Oblivious Website</title>
     <link rel="icon" href="imgs/logoSmall.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: rgb(18, 18, 18);
-            /* text-align: center; */
+            font-family: Bahnschrift;
             margin: 0;
-            padding: 0;
-            font-family: Arial;
             overflow-x: hidden;
+            background-color: #121212;
+        }
+
+        .header {
+            padding: 0px;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: purple;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: beige;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .side {
+            flex: 20%;
+            background-color: #121212;
+            padding: 20px;
+        }
+
+        .center {
+            flex: 60%;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .mainImg {
+            background-color: blanchedalmond;
+            width: 100%;
+            padding: 20px;
         }
 
         button {
-            border: 0;
+            border: none;
             color: black;
             background-color: purple;
             text-decoration: none;
@@ -26,158 +83,34 @@
             display: block;
             float: left;
             transition-duration: 0.4s;
+            font-family: Bahnschrift, sans-serif;
         }
 
         button:hover {
             background-color: white;
         }
 
-        .center {
-            display: block;
-            margin: auto;
-            text-align: center;
-
-        }
-
-        table,
-        tr {
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            border-collapse: collapse;
-            border-spacing: 0;
-            border: 0px;
-            padding: 0px;
+        table {
+            border-spacing: 0px;
         }
 
         th {
-            border-collapse: collapse;
-            border-spacing: 0;
-            border: 0px;
             padding-right: 25px;
-            padding-top: 0;
-            padding-bottom: 0;
+            border: 0px;
         }
 
-        td {
-            vertical-align: top;
-            padding: 0;
-            margin: 0;
-        }
-    </style>
-    <style>
-        * {
-            box-sizing: border-box
-        }
+        @media screen and (max-width:700px) {
 
-        .slideShow {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-
-        .slide {
-            display: none;
-        }
-
-        .previous,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            /* border-radius: 0 3px 3px 0; */
-            /* border-radius: 50%; */
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            /* border-radius: 3px 0 0 3px; */
-        }
-
-        .previous:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .numberText {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
+            .row,
+            .navbar {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 
 <body>
-    <div style="width: 100%;">
-        <a href="index.html">
-            <img src="imgs/banner.png" alt="banner" onclick="document.location = 'index.html'">
-        </a>
-    </div>
-
-    <div style="background-color: purple; border-style: solid; border-width: 0px; border-color: black; padding: 0;">
+    <div class="navbar">
         <table>
             <tr>
                 <th><button type=" button" onclick="document.location = 'index.html'"><i>Home</i></button></th>
@@ -189,84 +122,23 @@
             </tr>
         </table>
     </div>
-
-    <br>
-    <div class="slideShow">
-        <div class="slide fade">
-            <div class="numberText">1 / 4</div>
-            <a href="epicChess.html">
-                <img src="imgs/carousel/1.png" style="width: 100%;">
-            </a>
-            <div class="text">Now Available!</div>
-        </div>
-        <div class="slide fade">
-            <div class="numberText">2 / 4</div>
-            <img src="imgs/carousel/2.png" style="width: 100%;">
-            <div class="text">Under Construction</div>
-        </div>
-        <div class="slide fade">
-            <div class="numberText">3 / 4</div>
-            <img src="imgs/carousel/3.png" style="width: 100%;">
-            <div class="text">Not Finished Yet</div>
-        </div>
-        <div class="slide fade">
-            <div class="numberText">4 / 4</div>
-            <img src="imgs/carousel/4.png" style="width: 100%;">
-            <div class="text">Sample Text</div>
-        </div>
-
-        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-
+    <div class="header">
+        <a href="index.html">
+            <img src="imgs/banner.png" alt="banner" onclick="document.location = 'index.html'">
+        </a>
     </div>
-    <br>
-    <div style="text-align: center;">
-        <span class="dot" onclick="setSlide(1)"></span>
-        <span class="dot" onclick="setSlide(2)"></span>
-        <span class="dot" onclick="setSlide(3)"></span>
-        <span class="dot" onclick="setSlide(4)"></span>
+    <div class="row">
+        <div class="side">
+        </div>
+        <div class="center">
+            <h2>The Personal Site of Tom Litherland</h2>
+            <p>This website is currently under construction, a lot of the stuff is still placeholder to be replaced at a
+                future date.</p>
+            <p>Hi! My name is Tom, and I am an aspiring developer! Find more about me <a href="blog.html">here</a> or check out my <a href="software.html">work!</a></p>
+        </div>
+        <div class="side">
+        </div>
     </div>
-
-    <script>
-        var index = 1;
-        switchSlide();
-        var x = setInterval(auto, 10000);
-        function changeSlide(n) {
-            index += n;
-            switchSlide();
-        }
-        function setSlide(n) {
-            index = n;
-            switchSlide();
-        }
-        function switchSlide() {
-            var i;
-            var slides = document.getElementsByClassName("slide");
-            var dots = document.getElementsByClassName("dot");
-            if (index > slides.length) {
-                index = 1;
-            }
-            if (index < 1) {
-                index = slides.length;
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[index - 1].style.display = "block";
-            dots[index - 1].className += " active";
-        }
-
-        function auto() {
-            console.log(index);
-            index++;
-            switchSlide();
-        }
-    </script>
-
 </body>
 
 </html>
