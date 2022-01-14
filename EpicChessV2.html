@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Chess V2</title>
+    <link rel="stylesheet" href="ECV2Styles.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Epic Chess V2</h1>
+    </div>
+    <div class="parallax"></div>
+    <div class="main">
+        <h2><i>Tom's Epic Chess</i>, rebuilt from the ground up!</h2>
+        <p>The remake we've all been waiting for! The full recreation of the beloved classic, now built in C++!
+        </p>
+    </div>
+    <div class="parallax p2"></div>
+    <div class="main">
+        <h2>Features:</h2>
+    </div>
+
+    <button class="tablink" onclick="openPage('sectA', this, '#121212')" id="defaultOpen">Development</button>
+    <button class="tablink" onclick="openPage('sectB', this, '#121212')">Features</button>
+    <button class="tablink" onclick="openPage('sectC', this, '#121212')"
+        style="color: rgb(124, 0, 0);">Download!</button>
+
+    <div id="sectA" class="tabcontent">
+        <h3>A</h3>
+    </div>
+    <div id="sectB" class="tabcontent">
+        <h3>B</h3>
+    </div>
+    <div id="sectC" class="tabcontent">
+        <h3>C</h3>
+    </div>
+    <div id="sectD" class="tabcontent">
+        <h4>D</h4>
+    </div>
+
+    <script>
+        function openPage(pageName, element, colour) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(pageName).style.display = "block";
+            element.classList.toggle("active");
+            element.backgroundColor = colour;
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>

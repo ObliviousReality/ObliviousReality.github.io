@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(18, 18, 18);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Bahnschrift, sans-serif;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 100px;
+    color: blueviolet;
+    z-index: 1;
+}
+
+.parallax {
+    background-image: url("imgs/epicChessV2.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.p2 {
+    background-image: url("imgs/epicChessV2Code.png");
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+}
+
+.main {
+    background-color: blueviolet;
+    text-align: center;
+    padding: 30px 80px;
+}
+
+.main>p {
+    max-width: 50%;
+    margin: auto;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.33%;
+    font-family: Bahnschrift, sans-serif;
+    font-weight: bold;
+}
+
+
+
+.tablink:active {
+    background-color: red;
+}
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#sectA {
+    background-color: #121212;
+}
+
+#sectB {
+    background-color: #121212;
+}
+
+#sectC {
+    background-color: #121212;
+}
