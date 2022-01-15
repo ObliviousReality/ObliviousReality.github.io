@@ -6,15 +6,14 @@
     <link rel="icon" href="imgs/logoSmall.png">
     <style>
         body {
-            /* background-color: rgb(18, 18, 18); */
             text-align: center;
             margin: 0;
             padding: 0;
             font-family: Bahnschrift;
-
+            background-color: #181818;
         }
 
-        button {
+        .bannerButton {
             border: none;
             color: black;
             background-color: purple;
@@ -28,12 +27,17 @@
             font-family: Bahnschrift, sans-serif;
         }
 
-        button:hover {
-            background-color: beige;
+        .bannerButton:hover {
+            color: red;
         }
 
-        table,
-        tr {
+        .banner {
+            padding: 0px;
+            background-color: purple;
+            margin: auto;
+        }
+
+        .bannerTable {
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -43,142 +47,175 @@
             padding: 0px;
         }
 
-
-        .gameTable {
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            border-collapse: collapse;
-            border-spacing: 0;
-            border-width: 2px;
-            border-style: solid;
-            border-color: black;
-            padding: 0px;
-            width: 100%;
-        }
-
-        td {
-            border-width: 2px;
-            border-style: solid;
-            border-color: black;
-            width: 33%;
-            vertical-align: top;
-        }
-
-        th {
+        .bannerHeader {
             border-collapse: collapse;
             border-spacing: 0;
             border: 0px;
             padding-right: 25px;
         }
 
-        h1 {
-            background-color: red;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-top: 15px;
-            padding-bottom: 8px;
+        .squarea {
+            width: 70%;
+            text-align: center;
+            margin: auto;
+            padding-top: 1%;
         }
 
-        .banner {
-            padding: 0px;
-            background-color: purple;
+        .square {
+            float: left;
+            position: relative;
+            width: 20%;
+            padding-bottom: 20%;
+            margin: 1% 6.66%;
+            overflow: hidden;
+            background-color: royalblue;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .content {
+            position: absolute;
+            height: 90%;
+            width: 90%;
+            padding: 10% 5%;
+            text-align: center;
+        }
+
+        .ctable {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+
+        .ctablecell {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            width: 100%;
+            color: red;
+            font-size: 300%;
+            text-shadow:
+                1px 0px 1px rgb(92, 0, 0), 0px 1px 1px rgb(160, 0, 0),
+                2px 1px 1px rgb(92, 0, 0), 1px 2px 1px rgb(160, 0, 0),
+                3px 2px 1px rgb(92, 0, 0), 2px 3px 1px rgb(160, 0, 0),
+                4px 3px 1px rgb(92, 0, 0), 3px 4px 1px rgb(160, 0, 0),
+                5px 4px 1px rgb(92, 0, 0), 4px 5px 1px rgb(160, 0, 0),
+                6px 5px 1px rgb(92, 0, 0), 5px 6px 1px rgb(160, 0, 0),
+                7px 6px 1px rgb(92, 0, 0);
+            z-index: 1;
 
         }
 
-        .description {
-            background-color: red;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-top: 0px;
-            padding-bottom: 3px;
+        .bg {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .img1 {
+            background-image: url("imgs/epicChessV2.png");
+            z-index: 0;
+            overflow: hidden;
         }
     </style>
 </head>
 
 <body>
     <div class="banner">
-        <table>
-            <tr>
-                <th><button type=" button" onclick="document.location = 'index.html'">Home</button></th>
-                <th><button type="button" onclick="document.location = 'software.html'"><i>Software</i></button></th>
-                <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
-                <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
-                <th><button type=" button" onclick="document.location = 'contact.html'">Contact</button></th>
+        <table class="bannerTable">
+            <tr class="bannerTable">
+                <th class="bannerHeader"><button type=" button" onclick="document.location = 'index.html'"
+                        class="bannerButton">Main</button>
+                </th>
+                <th class="bannerHeader"><button type="button" onclick="document.location = 'software.html'"
+                        class="bannerButton"><i>Selected Work</i></button></th>
             </tr>
         </table>
     </div>
-    <div>
-        <h1>Elite Series</h1>
-        <p class="description">The stuff I'm proud of!</p>
-        <table class="gameTable">
-            <tr>
-                <td>
-                    <a href="EpicChessV2.html">
-                        <h3>Epic Chess V2</h3>
-                        <p>(picture pending)</p>
-                    </a>
-                </td>
-                <td>
-                    <h3>CTRL-C, CTRL-V</h3>
-                    <p>(picture pending)</p>
-                </td>
-                <td>
-                    <h3>Who Knows</h3>
-                    <p>(picture pending)</p>
-                </td>
-            </tr>
-        </table>
+    <div class="squarea">
+        <div class="square bg img1">
+            <a href="EpicChessV2.html">
+                <div class="content">
+                    <div class="ctable">
+                        <div class="ctablecell">
+                            <p>Epic Chess V2</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>There</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>Test</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>Hello</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>There</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>Test</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>Hello</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>There</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="square bg">
+            <div class="content">
+                <div class="ctable">
+                    <div class="ctablecell">
+                        <p>Test</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <h1>Tom's Epic Series:</h1>
-        <p class="description">My first ventures into Game Development.</p>
-        <table class="gameTable">
-            <tr>
-                <td>
-                    <a href="epicChess.html">
-                        <h3>Tom's Epic Chess</h3>
-                        <img src="imgs/epicChess.png">
-                    </a>
-                </td>
-                <td>
-                    <a href="epicMonopoly.html">
-                        <h3>Tom's Epic Monopoly</h3>
-                        <img src="imgs/epicMonopoly.png" style="width:384px; height: 216px;">
-                    </a>
-                </td>
-                <td>
-                    <a>
-                        <h3>To Be Completed</h3>
-                        <p>(picture pending)</p>
-                    </a>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div>
-        <h1>University Series</h1>
-        <p class="description">Games and software developed at University.</p>
-        <table class="gameTable">
-            <tr>
-                <td>
-                    <a>
-                        <h3>Tom's Epic 8-Ball Pool</h3>
-                        <p>(picture pending)</p>
-                    </a>
-                </td>
-                <td>
-                    <h3>Demon Dash</h3>
-                    <p>(picture pending)</p>
-                </td>
-                <td>
-                    <h3>Who Knows</h3>
-                    <p>(picture pending)</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-
 </body>
 
 </html>

@@ -6,119 +6,18 @@
     <link rel="icon" href="imgs/logoSmall.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Bahnschrift;
-            margin: 0;
-            overflow-x: hidden;
-            background-color: #121212;
-        }
-
-        .header {
-            padding: 0px;
-            text-align: center;
-            background-color: #121212;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .navbar {
-            display: flex;
-            background-color: purple;
-            padding: 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .navbar a {
-            color: black;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .navbar a:hover {
-            background-color: beige;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .side {
-            flex: 20%;
-            background-color: #121212;
-            padding: 20px;
-        }
-
-        .center {
-            flex: 60%;
-            background-color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px 10px 10px 10px;
-        }
-
-        .mainImg {
-            background-color: blanchedalmond;
-            width: 100%;
-            padding: 20px;
-        }
-
-        button {
-            border: none;
-            color: black;
-            background-color: purple;
-            text-decoration: none;
-            padding: 10px 5px;
-            font-size: 36px;
-            cursor: pointer;
-            outline: none;
-            display: block;
-            float: left;
-            transition-duration: 0.4s;
-            font-family: Bahnschrift, sans-serif;
-        }
-
-        button:hover {
-            background-color: white;
-        }
-
-        table {
-            border-spacing: 0px;
-        }
-
-        th {
-            padding-right: 25px;
-            border: 0px;
-        }
-
-        @media screen and (max-width:700px) {
-
-            .row,
-            .navbar {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="indexstyles.css">
 </head>
 
 <body>
-    <div class="navbar">
-        <table>
-            <tr>
-                <th><button type=" button" onclick="document.location = 'index.html'"><i>Home</i></button></th>
-                <th><button type="button" onclick="document.location = 'software.html'">Software</button></th>
-                <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
-                <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
-                <th><button type=" button rightButton" onclick="document.location = 'contact.html'">Contact</button>
+    <div class="banner">
+        <table class="bannerTable">
+            <tr class="bannerTable">
+                <th class="bannerHeader"><button type=" button" onclick="document.location = 'index.html'"
+                        class="bannerButton"><i>Main</i></button>
                 </th>
+                <th class="bannerHeader"><button type="button" onclick="document.location = 'software.html'"
+                        class="bannerButton">Selected Work</button></th>
             </tr>
         </table>
     </div>
@@ -131,11 +30,122 @@
         <div class="side">
         </div>
         <div class="center">
-            <h2>The Personal Site of Tom Litherland</h2>
-            <p>This website is currently under construction, a lot of the stuff is still placeholder to be replaced at a
-                future date.</p>
-            <p>Hi! My name is Tom, and I am an aspiring developer! Find more about me <a href="about.html">here</a> or
-                check out my <a href="software.html">work!</a></p>
+            <div class="top">
+                <h2>The Personal Site of Tom Litherland</h2>
+                <p>Hello! My name is Tom, and I am an aspiring developer!<br> Scroll down to find out more about me or
+                    check out my <a href="software.html">work!</a> Alternatively <a href="#contact">click here to get in
+                        touch</a>.</p>
+                <p>I am currently based in Lancaster, but am looking to move elsewhere, preferably London.</p>
+                <h3>About Me:</h3>
+            </div>
+            <div id="about">
+                <div>
+                    <h4 style="margin-top: 0px;">Languages:</h4>
+                    <ul>
+                        <li>Fluent in Java</li>
+                        <li>Fluent in Python</li>
+                        <li>Proficient in C</li>
+                        <li>Proficient in C++ (but becoming fluent)</li>
+                        <li>Proficient in JavaScript</li>
+                        <li>Proficient in HTML/CSS (This site was made from scratch!)</li>
+                        <li>Willing and able to learn more languages if needed</li>
+                    </ul>
+                    <h4>Software & Relevant Skills</h4>
+                    <ul>
+                        <li>Highly Experienced with GIT</li>
+                        <li>Highly Experienced with VSCode</li>
+                        <li>Fully Experienced with the entire Microsoft Office Suite</li>
+                        <li>Learning VS19</li>
+                        <li>Experience with Eclipse</li>
+                        <li>Experienced working in groups</li>
+                        <li>Large amount of experience working remotely</li>
+                        <li>Experience with working on large codebases</li>
+                        <li>I always code to the highest standard I can achieve</li>
+                    </ul>
+                    <h4>Education</h4>
+                    <ul>
+                        <li>Studying a Master's in Computer Science at Lancaster University, currently averaging a First
+                            (76%).
+                        </li>
+                        <li>My Dissertation is on the use of Machine Learning in Automated Program Repair</li>
+                        <li>A in A-Level Maths and History, B in Computer Science</li>
+                        <li>9 GCSEs A*-B</li>
+                    </ul>
+                    <h4>Hobbies/Interests</h4>
+                    <ul>
+                        <li>PC Gaming</li>
+                        <li>Stand-Up Comedy</li>
+                        <li>LEGO</li>
+                        <li>Alt/Indie Rock</li>
+                        <li>one of those wierdos who actually enjoys programming</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="contact">
+                <h3>Contact:</h3>
+                <section>
+                    <a name="contact"></a>
+                    <div>
+                        <div class="squarea">
+                            <div class="square bg twitter">
+                                <a href="https://twitter.com/TsarOblivious" target="_blank">
+                                    <div class="content">
+                                        <div class="ctable">
+                                            <div class="ctablecell">
+                                                <p>Twitter</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="square bg linkedin">
+                                <a href="https://www.linkedin.com/in/tomlitherland/" target="_blank">
+                                    <div class="content">
+                                        <div class="ctable">
+                                            <div class="ctablecell">
+                                                <p>LinkedIn</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="square bg youtube">
+                                <a>
+                                    <div class="content">
+                                        <div class="ctable">
+                                            <div class="ctablecell">
+                                                <p>Youtube</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="square bg github">
+                                <a href="https://github.com/ObliviousReality" target="_blank">
+                                    <div class="content">
+                                        <div class="ctable">
+                                            <div class="ctablecell">
+                                                <p>GitHub</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="square bg email">
+                                <a href="mailto:tomas.litherland@virginmedia.com" target="_blank">
+                                    <div class="content">
+                                        <div class="ctable">
+                                            <div class="ctablecell">
+                                                <p>Email</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
         <div class="side">
         </div>

@@ -87,6 +87,9 @@ html {
     display: none;
     padding: 100px 20px;
     height: 100%;
+    width: 50%;
+    margin: auto;
+
 }
 
 #sectA {
