@@ -10,7 +10,8 @@
  }
 
  .header {
-     padding: 0px;
+     margin: auto;
+     padding: 1%;
      text-align: center;
      background-color: #121212;
      color: white;
@@ -69,7 +70,7 @@
  .side {
      flex: 20%;
      background-color: #121212;
-     padding: 20px;
+     padding: 0px;
  }
 
  .center {
@@ -167,7 +168,8 @@
  }
 
  #contact>p {
-     font-size: 20px;
+     font-size: 15px;
+     margin: 0;
  }
 
  #contact>div {
@@ -200,7 +202,17 @@
      overflow: hidden;
  }
 
+ .email {
+     background-image: url("imgs/email.png");
+     z-index: 0;
+     overflow: hidden;
+ }
 
+ .logo {
+     background-image: url("imgs/banner.png");
+     z-index: 0;
+     overflow: hidden;
+ }
 
  .squarea {
      width: 70%;
