@@ -9,30 +9,11 @@
             background-color: rgb(18, 18, 18);
             /* text-align: center; */
             margin: 0;
-            margin-top: 60px;
             padding: 0;
             font-family: Bahnschrift, sans-serif;
         }
 
-        button {
-            border: none;
-            color: black;
-            background-color: purple;
-            padding: 10px 5px;
-            font-size: 36px;
-            cursor: pointer;
-            outline: none;
-            display: block;
-            float: left;
-            transition-duration: 0.4s;
-            font-family: Bahnschrift, sans-serif;
-        }
-
-        button:hover {
-            background-color: beige;
-        }
-
-        table,
+        .contentTable,
         tr {
             margin-left: auto;
             margin-right: auto;
@@ -54,14 +35,45 @@
             vertical-align: top;
         }
 
+        .bannerButton {
+            border: none;
+            color: black;
+            background-color: purple;
+            padding: 10px 5px;
+            font-size: 36px;
+            cursor: pointer;
+            outline: none;
+            display: block;
+            float: left;
+            transition-duration: 0.4s;
+            font-family: Bahnschrift, sans-serif;
+        }
+
+        .bannerButton:hover {
+            color: red;
+        }
+
         .banner {
-            /* overflow: hidden; */
             padding: 0px;
             background-color: purple;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
+            margin: auto;
+        }
+
+        .bannerTable {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0px;
+            padding: 0px;
+        }
+
+        .bannerHeader {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0px;
+            padding-right: 25px;
         }
 
         .main {
@@ -76,8 +88,7 @@
             padding-top: 10px;
             padding-bottom: 10px;
             text-align: center;
-            position: fixed;
-            top: 64px;
+            /* position: fixed; */
             width: 100%;
             z-index: 100;
         }
@@ -103,7 +114,7 @@
 
         .download {
             width: 20%;
-            background-color: blueviolet;
+            background-color: rgb(96, 31, 158);
 
         }
 
@@ -139,14 +150,14 @@
 </head>
 
 <body>
-    <div class="banner" style="width: 100%;">
-        <table>
-            <tr>
-                <th><button type=" button" onclick="document.location = 'index.html'">Home</button></th>
-                <th><button type="button" onclick="document.location = 'software.html'"><i>Software</i></button></th>
-                <th><button type=" button" onclick="document.location = 'blog.html'">Blog</button></th>
-                <th><button type=" button" onclick="document.location = 'about.html'">About</button></th>
-                <th><button type=" button" onclick="document.location = 'contact.html'">Contact</button></th>
+    <div class="banner">
+        <table class="bannerTable">
+            <tr class="bannerTable">
+                <th class="bannerHeader"><button type=" button" onclick="document.location = 'index.html'"
+                        class="bannerButton">Main</button>
+                </th>
+                <th class="bannerHeader"><button type="button" onclick="document.location = 'software.html'"
+                        class="bannerButton"><i>Selected Work</i></button></th>
             </tr>
         </table>
     </div>
@@ -155,7 +166,7 @@
         <p class="title"><b>Tom's Epic Chess</b></p>
     </div>
     <div>
-        <table style="width: 100%;">
+        <table style="width: 100%;" class="contentTable">
             <tr>
                 <th class="info" style="padding-top: 64px;">
                     <h3>Information:</h3>
@@ -206,29 +217,30 @@
                 </td>
                 <td class="about">
                     <div style="display: inline-block; text-align: left; line-height: 1.2; max-width: 90%;">
+                        <h2>NOTE: This is satire. In case that wasn't obvious.</h2>
                         <p>Tom's Epic Chess was the first game I ever made. It was an assignment for my A-Level computer
-                            science project, with no real design specifications other than it had to be built in Python.
+                            science project, which had no real design specifications other than it had to be built in
+                            Python.
+                            <br>
                             At the time I didn't know how to implement Object Oriented Programming into Python (or any
                             language for that matter), so the whole project is procedural, and 99% of it is done in one
-                            file. It's 1200 lines long, vaguely commented and I have no idea how it actually works.
-                            Surprisingly, it
-                            does actually work, so I don't question it, don't touch it and
-                            I definitely don't look at it for too long - You never know, there may be a crazed murderer
-                            on line 947. He
-                            may mistake you for his target as no one bothered to tell him what the real target looked
-                            like. Bring a brace, you may be able to scare it off.
+                            file. It's 1200 lines long, vaguely commented and as such I have no idea how it actually
+                            works.
+                            Surprisingly, it does actually work, so I don't question it, don't touch it and
+                            I definitely don't look at it for too long - anything could be in there.
                             <br><br>
                         </p>
                         <img src="imgs/epicChess1.png" class="center zoom">
                         <p>
                             The brief of the project was simple: make something in Python. How this escalated into
-                            perhaps the best/worst game of chess ever made is lost to time. It's made using Python's
-                            Pygame library, a fairly powerful library for creating 2D graphics in a window, and one I
-                            quite like as it has extensive documentation on <a
+                            perhaps the best/worst game of chess ever made is lost to time. <br>
+                            I developed it using Python's Pygame library, a fairly powerful library for creating 2D
+                            graphics in a window, and one I quite like as it has extensive documentation on <a
                                 href="https://www.pygame.org/docs/">pygame.org</a>.
                             <br><br>
-                            The graphics, which for their time were awful, are a clear insight into my mind at the time - complete
-                            utter laziness. The only 'quality' graphics are the chess pieces, which, unsurprisingly, are
+                            The graphics, which for their time were awful, are a clear insight into my "That'll do"
+                            mentality at the time. The only 'quality' graphics are the chess pieces, which,
+                            unsurprisingly, are
                             the only bits I didn't make - they were kindly donated by <a href="https://olihewi.com/">
                                 Oliver Hewison</a>, who was pretending to be my 'professional' client for this task.
                             Most of the UI text is yellow because I accidentally set that as the default colour for text
@@ -254,7 +266,8 @@
                     <a href="lib/Tom's Epic Chess.zip" download="epicChess">
                         <img src="imgs/downloadButton.png">
                     </a>
-                    <p style="width: 90%; line-height: 1.2; text-align: center; display: inline-block;">Requirments:<br>
+                    <p style="width: 90%; line-height: 1.2; text-align: center; display: inline-block;">
+                        Requirements:<br>
                         The .exe file can be run using Windows/Linux<br>
                         Source code access requires Python, but execution requires Python's Pygame library, download <a
                             href="https://www.pygame.org/wiki/GettingStarted">here</a>.</p>
