@@ -2,10 +2,15 @@
     <title>Selected University Work</title>
     <link rel="icon" href="imgs/logoSmall.png">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Bahnschrift, sans-serif;
             background-color: #181818;
+            overflow: hidden;
         }
 
         .banner {
@@ -72,7 +77,6 @@
             color: palevioletred;
             display: block;
             transition: 0.3s;
-            white-space: nowrap;
         }
 
         .sidebar a:hover {
@@ -81,11 +85,54 @@
 
         .sidebar .closebtn {
             padding: 8px 8px 8px 15px;
+            white-space: nowrap;
         }
 
         #main {
             transition: margin-left 0.5s;
             padding: 16px;
+            /* padding-left: 33%;
+            width: 33%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            height: 70%;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px; */
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .side {
+            flex: 20%;
+            background-color: #121212;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .center {
+            flex: 60%;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .content {
+            font-size: 18px;
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            line-height: 1.4;
+        }
+
+        .content>div {
+            text-align: left;
+            display: block;
+            margin: auto;
         }
 
         @media screen and (max-width: 600px) {
@@ -113,6 +160,10 @@
                 font-size: 18px;
             }
         }
+
+        #main p {
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -120,9 +171,9 @@
 
     <div id="theSidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰ Menu</a>
-        <a href="#">Overview</a>
-        <a href="#">option 2</a>
-        <a href="#">option 3</a>
+        <a href="#intro">Introduction</a>
+        <a href="#dissertation">Dissertation</a>
+        <a href="#distributed">Distributed Systems</a>
     </div>
     <div class="banner">
         <div class="banner-centered">
@@ -130,8 +181,73 @@
         </div>
         <p onclick="openNav()">☰ Menu</p>
     </div>
-    <div id="main">
-        <p>Hello There!</p>
+    <div id="main" onclick="closeNav()">
+        <div class="row">
+            <div class="side">
+            </div>
+            <div class="center">
+                <div class="content">
+                    <h2 id="intro">Brief Introduction:</h2>
+                    <div>
+                        <p>This is a collection of stories and snippets of some of the work I have produced whilst at
+                            the University of Lancaster. The University's rules mean that I am not allowed to share code
+                            with others, as it is a breach of copyright, but I can still discuss the projects I have
+                            completed, and I will discuss the various tools I have used and what I have produced.</p>
+                    </div>
+                    <h2 id="dissertation">Dissertation:</h2>
+                    <div>
+                        <p>
+                            My Dissertation, completed during my Third Year of University covered the use of Machine
+                            Learning Classification to predict whether a program fault (i.e. bug) could be fixed
+                            automatically using an Automated Repair Program. This was not the dissertation that I wanted
+                            to do, I originally requested projects around Game Development or Software Development, but
+                            in the end I feel I produced a strong and potentially useful finding for the field of
+                            Automated Program Repair (APR).<br>
+                            APR is a fairly new concept of using Genetic Programming to automatically fix faults in
+                            software, but has only had limited sucess over the last 10 years of its existance. My
+                            dissertation aimed to automatically classify these bugs into either Fixable or Not Fixable
+                            to
+                            both speed up the APR process and also to produce a dataset that can be analysed to see if
+                            patterns or trends are visible to explain why some bugs cannot be fixed and some can.<br>
+                            My project had mixed success in these regards, while I managed to produce a classification
+                            program that was capable of pretty accurately classifying the bugs into the categories, the
+                            data produced from this did not show any useful patterns or trends.<br>
+                            I got to use a swathe of new software during this project, with my first exposure to tools
+                            like Docker, a useful alternative to a VM, and Weka, a useful machine learning platform with
+                            a good user interface as well as programmatable options. I plan to use both of these in
+                            future projects. I was given freedom to use whatever language I liked, and I ended up using
+                            Python for the large majority of this project as I had to work with files a lot, and Python
+                            is just far superior than any other langauges when working with files. I also chose to use
+                            Microsoft Excel over statistical languages like R for analysis as I am more comfortable with
+                            these, and I have definitely improved my Excel skills, especially with Pivot Tables and
+                            large dataset managment. I even got to use some SQL to combined these datasets together.
+                            <br>
+                            As for the field of Automated Program Repair, while I eventually found the way it works
+                            interesting and saw its potential, for me this field just isn't there yet for me to get
+                            involved with
+                            it or want to investigate my findings further. I'm still set on my original interests of
+                            Software and Game Development.
+                        </p>
+                    </div>
+                    <h2 id="distributed">Distributed Systems</h2>
+                    <div>
+                        <p>My favourite module studied during my Third Year was covering Distributed Systems. While the
+                            course content itself was not the most interesting or engaging, I was mostly swayed by its
+                            coursework. The Module, 311, had one main coursework over 10 weeks, split up into a few
+                            marking sessiosn to track progress, and the aim was to produce a networked Client-Server
+                            auctioning system. Again, not the most exciting but it was the most 'free' coursework in
+                            terms of implementation I had had in the whole degree. As CS coursework is hard to make
+                            'harder', the department scaled difficulty by removing the amount of support and
+                            hand-holding they offered, so in first year a coursework would just be a slight spin on
+                            something we had worked through in a lab, whereas in this coursework, we were gived a bried,
+                            told which libraries could help, and told to meet a set of guidelines by the given due date.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="side">
+            </div>
+        </div>
     </div>
 
     <script>
