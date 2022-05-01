@@ -1,0 +1,147 @@
+<head>
+    <title>Selected University Work</title>
+    <link rel="icon" href="imgs/logoSmall.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Bahnschrift, sans-serif;
+            background-color: #181818;
+        }
+
+        .banner {
+            position: relative;
+            overflow: hidden;
+            background-color: purple;
+            padding: 0;
+        }
+
+        .banner a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 7.5px 15px;
+            text-decoration: none;
+            font-size: 36px;
+        }
+
+        .banner p {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 7.5px 15px;
+            text-decoration: none;
+            font-size: 36px;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .banner a:hover {
+            color: red;
+        }
+
+        .banner a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .banner-centered a {
+            float: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #181818;
+            overflow-x: hidden;
+            transition: 0.5s;
+            /* padding-top: 60px; */
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 36px;
+            color: palevioletred;
+            display: block;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .sidebar a:hover {
+            color: red;
+        }
+
+        .sidebar .closebtn {
+            padding: 8px 8px 8px 15px;
+        }
+
+        #main {
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .banner a,
+            .banner-right {
+                float: none;
+                display: block;
+            }
+
+            .banner-centered a {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="theSidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰ Menu</a>
+        <a href="#">Overview</a>
+        <a href="#">option 2</a>
+        <a href="#">option 3</a>
+    </div>
+    <div class="banner">
+        <div class="banner-centered">
+            <a href="software.html"><i>Selected Work</i></a>
+        </div>
+        <p onclick="openNav()">☰ Menu</p>
+    </div>
+    <div id="main">
+        <p>Hello There!</p>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("theSidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+            document.getElementById("theSidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
