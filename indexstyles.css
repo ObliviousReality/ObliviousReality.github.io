@@ -23,7 +23,7 @@
  .bannerButton {
      border: none;
      color: black;
-     background-color: purple;
+     background-color: #6B16A2;
      padding: 10px 5px;
      font-size: 36px;
      cursor: pointer;
@@ -36,12 +36,12 @@
 
  .bannerButton:hover {
      color: red;
-     background-color: purple;
+     background-color: #6B16A2;
  }
 
  .banner {
      padding: 0px;
-     background-color: purple;
+     background-color: #6B16A2;
      margin: auto;
  }
 

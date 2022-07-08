@@ -10,13 +10,18 @@
             margin: 0;
             font-family: Bahnschrift, sans-serif;
             background-color: #181818;
-            overflow: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
         }
 
         .banner {
             position: relative;
             overflow: hidden;
-            background-color: purple;
+            background-color: #6B16A2;
             padding: 0;
         }
 
@@ -91,6 +96,7 @@
         #main {
             transition: margin-left 0.5s;
             padding: 16px;
+            /* margin-right: 200px; */
             /* padding-left: 33%;
             width: 33%;
             margin: 0;
@@ -254,6 +260,10 @@
         function openNav() {
             document.getElementById("theSidebar").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
+            // document.getElementById("main").style.marginRight = document.getElementById("main").style.marginRight + "250px"
+            var x = document.getElementById("main").style.marginRight
+            console.log(x)
+            console.log("Hello")
         }
         function closeNav() {
             document.getElementById("theSidebar").style.width = "0";
