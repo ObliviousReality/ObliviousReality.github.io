@@ -81,10 +81,10 @@ class Ray{
     void draw() {
 
         stroke(255,0,0);
-        push();
+        // push();
         translate(pos.x, pos.y);
         line(0,0,dir.x * 10, dir.y * 10);
-        pop();
+        // pop();
     }
 
     void move(int x, int y)
