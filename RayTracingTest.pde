@@ -37,7 +37,7 @@ void draw()
     e.move(mouseX, mouseY);
     e.draw();
     e.test(walls);
-    if(delay > 0){
+    if (delay > 0) {
         delay--;
     }
 }
@@ -60,10 +60,11 @@ class Wall{
     void draw()
     {
         stroke(255);
-        strokeWeight(1);
+        strokeWeight(10);
         line(a.x, a.y,b.x, b.y);
     }
 }
+
 
 
 
@@ -159,7 +160,7 @@ class Emitter{
     {
 
         for (int i = 0; i < rays.length; i++) {
-            float closestDist = Number.MAX_VALUE;
+            float closestDist = 20000000;
             PVector closestHit = null;
             for (int j = 0; j < walls.length; j++) {
                 PVector hit = rays[i].test(walls[j]);
@@ -177,8 +178,9 @@ class Emitter{
             if (closestHit != null)
             {
                 // stroke(0,0,255);
-                stroke(255,0,255);
-                strokeWeight(1);
+                float intensity = map(closestDist, 0, 800, 255, 0);
+                stroke(intensity,0,intensity);
+                strokeWeight(map(closestDist, 0, 800, 5, 0));
                 point(closestHit.x, closestHit.y);
                 // line(pos.x, pos.y, closestHit.x, closestHit.y);
             }
@@ -186,3 +188,4 @@ class Emitter{
 
     }
 }
+
