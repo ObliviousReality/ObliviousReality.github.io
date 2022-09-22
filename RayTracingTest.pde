@@ -84,6 +84,7 @@ class Ray{
         // push();
         translate(pos.x, pos.y);
         line(0,0,dir.x * 10, dir.y * 10);
+        translate( -pos.x, -pos.y);
         // pop();
     }
 
