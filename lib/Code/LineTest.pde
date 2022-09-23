@@ -31,10 +31,6 @@ void draw()
         if (key == 'p') {
             exit();
         }
-        if (key == 'v' && delay == 0) {
-            e.drawLines();
-            delay = 60;
-        }
     }
     if (drawWalls) {
         for (int i = 0; i < NumWalls + 4; i++) {
@@ -168,7 +164,6 @@ class Emitter{
     Ray[][] rays;
     int density;
 
-    boolean drawLines = true;
     Emitter(int x, int y, int density) {
         this.density = density;
         // rays = new Ray[360 * density][MAXDEPTH];
@@ -247,9 +242,7 @@ class Emitter{
                         // strokeWeight(map(closestDist, 0, 1000, 5, 0));
                         point(closestHit.x, closestHit.y);
                         // drawGradient(new PVector(pos.x,pos.y), new PVector(closestHit.x,closestHit.y), color(255, 0,0), color(intensity, 0,0));
-                        if (drawLines) {
-                            line(rays[i][depth].pos.x, rays[i][depth].pos.y, closestHit.x, closestHit.y);
-                        }
+                        line(rays[i][depth].pos.x, rays[i][depth].pos.y, closestHit.x, closestHit.y);
                         if (depth!= 2) {
                             Wall w = walls[wallIndex];
                             float lineAngle = atan2(w.b.y - w.a.y, w.b.x - w.a.x);
@@ -275,9 +268,5 @@ class Emitter{
                ((100 - i - 1) * start.y + (i + 1) * end.y) / 100
                );
         }
-    }
-
-    void drawLines() {
-        this.drawLines = !this.drawLines;
     }
 }
