@@ -38,7 +38,8 @@ void draw()
         }
     }
     e.move(mouseX, mouseY);
-    circle(mouseX, mouseY, 5);
+    strokeWeight(5);
+    point(mouseX, mouseY);
     e.draw();
     e.test(walls);
     if (delay > 0) {
