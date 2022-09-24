@@ -224,9 +224,9 @@ class Emitter{
                             strokeWeight(4);
                         }
                         // stroke(intensity);
-                        if (drawLines) {
-                            line(rays[i][depth].pos.x, rays[i][depth].pos.y, closestHit.x, closestHit.y);
-                        }
+                        // if (drawLines) {
+                        //     line(rays[i][depth].pos.x, rays[i][depth].pos.y, closestHit.x, closestHit.y);
+                        // }
                         strokeWeight(map(closestDist, 0, width * 2, 5, 0));
                         point(closestHit.x, closestHit.y);
                         Wall w = walls[wallIndex];
