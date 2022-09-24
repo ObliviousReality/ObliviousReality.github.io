@@ -28,6 +28,10 @@ void draw()
         if (key == 'p') {
             exit();
         }
+        if (key == 'v' && delay == 0) {
+            e.toggleLines();
+            delay = 30;
+        }
     }
     if (drawWalls) {
         for (int i = 0; i < NumWalls; i++) {
@@ -126,6 +130,8 @@ class Emitter{
     PVector pos = new PVector();
     Ray[] rays;
     int density;
+
+    boolean drawLines = false;
     Emitter(int x, int y, int density) {
         this.density = density;
         rays = new Ray[360 * density];
@@ -182,10 +188,15 @@ class Emitter{
                 stroke(intensity,0,intensity);
                 strokeWeight(map(closestDist, 0, 800, 5, 0));
                 point(closestHit.x, closestHit.y);
-                // line(pos.x, pos.y, closestHit.x, closestHit.y);
+                if (drawLines) {
+                    line(pos.x, pos.y, closestHit.x, closestHit.y);
+                }
             }
         }
 
+    }
+    void toggleLines() {
+        this.drawLines = !this.drawLines;
     }
 }
 

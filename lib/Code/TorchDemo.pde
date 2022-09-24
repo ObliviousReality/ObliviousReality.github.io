@@ -34,7 +34,7 @@ void draw()
             exit();
         }
         if (key == 'v' && delay == 0) {
-            e.drawLines();
+            e.toggleLines();
             delay = 30;
         }
         if (key == 'c' && delay == 0){
@@ -295,7 +295,7 @@ class Emitter{
 
     }
 
-    void drawLines() {
+    void toggleLines() {
         this.drawLines = !this.drawLines;
     }
 
