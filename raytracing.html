@@ -1,19 +1,46 @@
 <head>
-    <title>RayTracingTest</title>
+    <title>RayTracingExperiment</title>
     <link rel="icon" href="imgs/logoSmall.png">
     <script type="text/javascript" src="lib/processing.js"></script>
+    <style>
+        div{
+            padding-left: 1%;
+        }
+        body{
+            background-color: #181818;
+            color: #6B16A2;
+            font-family: bahnschrift;
+        }
+        p{
+            font-size: 32px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Ray Casting Demo:</h1>
-    <script type="text/processing" src="lib/Code/RayTracingTest.pde"></script>
-    <canvas id="sketch" style="border: 1px solid black"></canvas>
-
-    <h1>Line Thingy:</h1>
-    <script type="text/processing" src="lib/Code/LineTest.pde"></script>
-    <canvas id="sketch" style="border: 1px solid black"></canvas>
-
-    <h1>Torch Demo:</h1>
-    <script type="text/processing" src="lib/Code/TorchDemo.pde"></script>
-    <canvas id="sketch" style="border: 1px solid black"></canvas>
+    <div style="display: flex;">
+        <div>
+            <h1>Ray Casting Demo:</h1>
+            <script type="text/processing" src="lib/Code/RayTracingTest.pde"></script>
+            <canvas id="sketch" style="border: 1px solid white" height="1200" width="1200"></canvas>
+        </div>
+        <div>
+            <h1>Simple Ray Tracing:</h1>
+            <script type="text/processing" src="lib/Code/LineTest.pde"></script>
+            <canvas id="sketch" style="border: 1px solid white" height="1200" width="1200"></canvas>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div>
+            <h1>Torch Demo:</h1>
+            <script type="text/processing" src="lib/Code/TorchDemo.pde"></script>
+            <canvas id="sketch" style="border: 1px solid white" height="1200" width="1200"></canvas>
+        </div>
+        <div>
+            <h1>Explanation:</h1>
+            <p>A selection of Processing examples showing, in order, Simple Ray Casting, Simple Ray Tracing and then Ray
+                Tracing in a complex environment.</p>
+            <p>In each of the examples, press 'B' to show the walls the light is bouncing/stopping at.</p>
+        </div>
+    </div>
 </body>
