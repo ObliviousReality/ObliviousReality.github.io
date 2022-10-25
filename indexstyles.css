@@ -79,6 +79,7 @@
 
  .center {
      flex: 60%;
+     width: 60%;
      background-color: white;
      padding: 20px;
      text-align: center;
