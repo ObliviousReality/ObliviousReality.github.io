@@ -1,66 +1,206 @@
+<!DOCTYPE html>
+
 <head>
-    <title>RayTracingExperiment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imgs/logoSmall.png">
     <script type="text/javascript" src="lib/processing.js"></script>
+    <title>RayTracing Experiment</title>
     <style>
-        div {
-            padding-left: 1%;
-        }
-
         body {
-            background-color: #181818;
-            color: #6B16A2;
-            font-family: bahnschrift;
+            background-color: rgb(18, 18, 18);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Bahnschrift, sans-serif;
+            height: 100%;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
-        p {
-            font-size: 32px;
-            width: 80%;
+        body::-webkit-scrollbar {
+            display: none;
         }
 
+        html {
+            height: 100%;
+        }
+
+        .tablink {
+            background-color: #6B16A2;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+            font-family: Bahnschrift, sans-serif;
+            font-weight: bold;
+        }
+
+
+
+        .tablink:active {
+            background-color: #e32128;
+        }
+
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 50px 20px;
+            padding-bottom: 0px;
+            /* height: 100%; */
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            line-height: 1.4;
+            ;
+        }
+
+        #sectA {
+            background-color: #121212;
+            /* margin-bottom: 200px; */
+        }
+
+        #sectB {
+            background-color: #121212;
+            /* padding-bottom: 400px; */
+        }
+
+        #sectC {
+            background-color: #121212;
+            /* padding-bottom: 400px; */
+        }
+
+        #sectD {
+            background-color: #121212;
+            /* padding-bottom: 400px; */
+        }
+
+        .selected {
+            background-color: #e32128;
+        }
+
+        .info {
+            background-color: #6B16A2;
+            position: fixed;
+            bottom: 5em;
+            right: 5em;
+            padding: 10px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .info>p {
+            text-align: left;
+        }
+
+        .exit {
+            background-color: #6B16A2;
+            position: fixed;
+            bottom: 5em;
+            left: 5em;
+            padding: 10px;
+            border-radius: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <div style="display: flex;">
-        <div>
-            <h1>Ray Casting Demo:</h1>
-            <script type="text/processing" src="lib/Code/RayTracingTest.pde"></script>
-            <canvas id="sketch" style="border: 1px solid white" height="1200" width="1200"></canvas>
-        </div>
-        <div>
-            <h1>Simple Ray Tracing:</h1>
-            <script type="text/processing" src="lib/Code/LineTest.pde"></script>
-            <canvas id="sketch" style="border: 1px solid white" height="1200" width="1200"></canvas>
-        </div>
+    <button class="tablink" onclick="openPage('sectA', this, '#121212')" id="defaultOpen">Ray Casting</button>
+    <button class="tablink" onclick="openPage('sectB', this, '#FFFFFF')">Simple Ray Tracing</button>
+    <button class="tablink" onclick="openPage('sectC', this, '#121212')">Complex Ray Tracing</button>
+    <button class="tablink" onclick="openPage('sectD', this, '#121212')">About</button>
+    <div id="sectA" class="tabcontent">
+        <h3>Ray Casting</h3>
+        <script type="text/processing" src="lib/Code/RayTracingTest/RayTracingTest.pde"></script>
+        <canvas id="sketch1" style="border: 1px solid white;  height: 800px; width: 800px;"></canvas>
     </div>
-    <div style="display: flex;">
-        <div>
-            <h1>Torch Demo:</h1>
-            <script type="text/processing" src="lib/Code/TorchDemo.pde"></script>
-            <canvas id="sketch" style="border: 1px solid white" height="1200" width="1200"></canvas>
-        </div>
-        <div>
-            <h1>Explanation:</h1>
+    <div id="sectB" class="tabcontent">
+        <h3>Simple Ray Tracing</h3>
+        <script type=" text/processing" src="lib/Code/LineTest/LineTest.pde"></script>
+        <canvas id="sketch2" style="border: 1px solid white;  height: 800px; width: 800px;"></canvas>
+    </div>
+    <div id="sectC" class="tabcontent">
+        <h3>Complex Ray Tracing</h3>
+        <script type="text/processing" src="lib/Code/TorchDemo/TorchDemo.pde"></script>
+        <canvas id="sketch3" style="border: 1px solid white; height: 800px; width: 800px;"></canvas>
+    </div>
+    <div id="sectD" class="tabcontent">
+        <h3>About</h3>
+        <div style="text-align: left;">
+            <br>
             <p>A selection of Processing examples showing, in order, Simple Ray Casting, Simple Ray Tracing and then Ray
                 Tracing in a complex environment.</p>
             <p>In each of the examples, press 'B' to show the walls the light is bouncing/stopping at.</p>
             <br>
             <p>In the Torch and Ray Casting Demos, press 'V' to view the lines of the Ray Tracing.</p>
             <p>In the Torch Demo, press 'C' to switch between monochrome mode and colour mode for the lighting.</p>
-            <p>In Monochrome mode, the first rays from the light source are brighter, and they get darker after each bounce.</p>
+            <p>In Monochrome mode, the first rays from the light source are brighter, and they get darker after each
+                bounce.</p>
             <p>In Colour mode, the first rays are red, the secondary rays and green and the tertiary rays are red.</p>
-            <p>The simulation will support more bounces but it is kept to 3 as it looks perfectly fine whilst retaining perfect performance.</p>
+            <p>The simulation will support more bounces but it is kept to 3 as it looks perfectly fine whilst retaining
+                perfect performance.</p>
             <br>
             <p>Inspired by the Ray Casting <a href="https://www.youtube.com/watch?v=TOEi6T2mtHo">series of videos </a>
                 by Daniel Schiffman.</p>
             <p>Programmed using Java in Processing 3, then converted to a web environment using Processing.js.</p>
             <h2>Code:</h2>
-            <a href = "lib/Code/RayTracingTest.pde">Ray Casting Demo</a>
-            <br>
-            <a href = "lib/Code/LineTest.pde">Simple Ray Tracing</a>
-            <br>
-            <a href = "lib/Code/TorchDemo.pde">Torch Demo</a>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <a href="lib/Code/RayTracingTest/RayTracingTest.pde">Ray Casting Demo</a>
+                    </td>
+                    <td>
+                        <a href="lib/Code/LineTest/LineTest.pde">Simple Ray Tracing</a>
+                    </td>
+                    <td>
+                        <a href="lib/Code/TorchDemo/TorchDemo.pde">Torch Demo</a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
+
+    <div id="infobox" class="info">
+        <h3>Controls</h3>
+        <p>C: Toggle Colours</p>
+        <p>V: Toggle Lines</p>
+        <p>B: Toggle Walls</p>
+    </div>
+
+    <a href="software.html">
+        <div class="exit">
+            <h3 style="color: white;">Back</h3>
+        </div>
+    </a>
+
+    <script>
+        function openPage(pageName, element, colour) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("selected");
+            }
+
+            document.getElementById(pageName).style.display = "block";
+            element.classList.add("selected");
+            element.backgroundColor = "#e32128";
+            if (pageName == "sectD") {
+                infoBox = document.getElementById("infobox");
+                infoBox.style.display = "none";
+            }
+            else{
+                infoBox = document.getElementById("infobox");
+                infoBox.style.display = "block";
+            }
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>

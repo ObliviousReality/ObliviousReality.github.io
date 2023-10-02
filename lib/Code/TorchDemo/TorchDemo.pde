@@ -8,7 +8,7 @@ boolean drawWalls = false;
 int delay = 0;
 
 void setup() {
-    size(1200,1200);
+    size(800,800);
     for (int i = 0; i < walls.length; i++) {
         walls[i] = new Wall((int)random(0, width),(int)random(0, height),(int)random(0, width),(int)random(0, width));
     }
