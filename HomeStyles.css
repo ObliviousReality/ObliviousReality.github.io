@@ -2,9 +2,27 @@ body {
     background-color: #121212;
     color: white;
     font-family: Bahnschrift;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
 }
 
+body::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "myEpicFont";
+    src: url("lib/boldfinger.ttf");
+}
 
 
 .sidenav {
@@ -21,11 +39,12 @@ body {
 
 .sidenav h3 {
     text-align: center;
-    padding: 20px 8px 20px 16px;
+    padding: 40px 8px 40px 16px;
     text-decoration: none;
     font-size: 2vw;
     color: white;
     display: block;
+    margin: 0;
 }
 
 .sidenav button {
@@ -75,7 +94,7 @@ body {
 }
 
 .icontext {
-    font-family: Boldfinger;
+    font-family: myEpicFont;
     font-size: 4vw;
     padding-top: 75%;
     position: absolute;
@@ -101,4 +120,69 @@ body {
 .selected {
     background-color: #121212;
     color: red;
+}
+
+.portf {
+    padding: 2rem;
+}
+
+.portf>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 5rem;
+}
+
+.portf>ul>li {
+    background-color: #181818;
+    border: 1px solid #6B16A2;
+    border-radius: .5rem;
+    color: transparent;
+}
+
+.portf>ul>li>figure {
+    margin: 0;
+    max-height: 280px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+}
+
+.portf>ul>li>figure>img {
+    width: 100%;
+}
+
+.portf>ul>li>figure>figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+}
+
+.portf>ul>li>figure>figcaption>h3 {
+    color: white;
+    padding: .75rem;
+    font-size: 1.25rem;
+}
+
+.portf>ul>li>p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #666666;
+}
+
+.portf>ul>li>a {
+    padding: .5rem 1rem;
+    margin: .5rem;
+}
+
+a {
+    background-color: goldenrod;
+    text-decoration: none;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
 }
