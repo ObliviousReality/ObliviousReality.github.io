@@ -10,10 +10,11 @@
  }
 
  a {
-      text-decoration:none;
-   }
+     text-decoration: none;
+ }
 
  .header {
+     width: 100%;
      margin: auto;
      padding: 1%;
      text-align: center;

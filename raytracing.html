@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,6 +105,17 @@
             padding: 10px;
             border-radius: 20px;
         }
+
+        @media screen and (max-height: 450px) {
+            .tablink {
+                font-size: 10px;
+            }
+
+            .exit {
+                bottom: 2em;
+                left: 2em;
+            }
+        }
     </style>
 </head>
 
@@ -196,7 +208,7 @@
                 infoBox = document.getElementById("infobox");
                 infoBox.style.display = "none";
             }
-            else{
+            else {
                 infoBox = document.getElementById("infobox");
                 infoBox.style.display = "block";
             }
@@ -204,3 +216,5 @@
         document.getElementById("defaultOpen").click();
     </script>
 </body>
+
+</html>
