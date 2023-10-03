@@ -33,7 +33,7 @@ html {
     top: 0;
     left: 0;
     background-color: #6B16A2;
-    overflow-x: hidden;
+    overflow: hidden;
     padding-top: 1%;
 }
 
@@ -52,10 +52,11 @@ html {
     vertical-align: middle;
     justify-content: center;
     align-items: center;
+    transition-duration: 0.5s;
 }
 
 .sidenav h3:hover {
-    background-color: #121212;
+    background-color: #181818;
     color: #e32128;
     cursor: pointer;
 }
@@ -70,6 +71,7 @@ html {
     padding: 0px 10px;
     display: none;
     overflow: hidden;
+    transition-duration: 1.5s;
 }
 
 .iconBox {
@@ -150,17 +152,23 @@ html {
 }
 
 .sideLinks {
-    font-size: 10vw;
+    font-size: 14vw;
     /* height: 24.5%; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    margin-top: 50%;
 }
 
 .fa-brands {
     text-decoration: none;
     color: white;
+    transition-duration: 0.5s;
+}
+
+.fa-brands:hover {
+    color: black;
 }
 
 
@@ -374,6 +382,7 @@ html {
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
+        margin-top: 0;
     }
 
     #linkedin {
@@ -404,4 +413,9 @@ html {
     .aboutItemHeader>span {
         font-size: 2vw;
     }
+}
+
+
+#main {
+    transition-duration: 0.5s;
 }
