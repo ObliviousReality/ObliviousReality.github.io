@@ -11,23 +11,38 @@
 
 <body>
     <div class="sidenav">
-        <div class="iconBox" onclick="openPage('main', this)" id="defaultOpen">
-            <div class="icon">
-                <div class="icontext">
-                    <!--DO NOT SPLIT--><p class="O">O</p><p class="R">R</p><!--DO NOT SPLIT-->
+        <a href="#main">
+            <div class="iconBox" onclick="openPage('main')" id="defaultOpen">
+                <div class="icon">
+                    <div class="icontext"><!--DO NOT SPLIT--><p class="O">O</p><p class="R">R</p><!--DO NOT SPLIT-->
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
         <div class="nameBox">
             <h2>Tom Litherland</h2>
             <h4>(AKA Oblivious Reality)</h4>
         </div>
-        <h3 class="sideButton" onclick="openPage('about', this)">About</h3>
-        <h3 class="sideButton" onclick="openPage('skills', this)">Skills</h3>
-        <h3 class="sideButton" onclick="openPage('portfolio', this)">Portfolio</h3>
-        <h3 class="sideButton" onclick="openPage('contact', this)">Contact</h3>
+        <a href="#about" onclick="openPage('about')">
+            <h3 id="aboutButton" class="sideButton" ">About</h3>
+        </a>
+        <a href=" #skills" onclick="openPage('skills')">
+                <h3 id="skillsButton" class="sideButton">
+                    Skills
+                </h3>
+        </a>
+        <a href="#portfolio" onclick="openPage('portfolio')">
+            <h3 id="portfolioButton" class="sideButton">
+                Portfolio
+            </h3>
+        </a>
+        <a href="#contact" onclick="openPage('contact')">
+            <h3 id="contactButton" class="sideButton">
+                Contact
+            </h3>
+        </a>
         <div class="sideLinks">
-            <a href="https://www.linkedin.com/in/tomlitherland/" id="linkedin"><i class="fa-brands fa-linkedin" ></i></a>
+            <a href="https://www.linkedin.com/in/tomlitherland/" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/ObliviousReality"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
@@ -49,7 +64,8 @@
     </div>
 
     <div class="tabContent" id="about">
-        <p>about</p>
+        <h1>Education</h1>
+        <h1>Experience</h1>
     </div>
 
     <div class="tabContent" id="skills">
@@ -177,7 +193,7 @@
     </div>
 
     <script>
-        function openPage(target, element) {
+        function openPage(target) {
             var contents = document.getElementsByClassName("tabContent");
             for (let i = 0; i < contents.length; i++) {
                 contents[i].style.display = "None";
@@ -190,9 +206,17 @@
 
             document.getElementById(target).style.display = "block";
             if (target != "main")
-                element.classList.add("selected");
+                document.getElementById(target + "Button").classList.add("selected");
         }
-        document.getElementById("defaultOpen").click();
+        var urlVal = window.location.href.split("#")[1];
+        if (urlVal) {
+            document.getElementById(urlVal).style.display = "block";
+            if (urlVal != "main")
+                document.getElementById(urlVal + "Button").classList.add("selected");
+        }
+        else {
+            openPage("main");
+        }
     </script>
 </body>
 

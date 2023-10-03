@@ -37,13 +37,13 @@ html {
     padding-top: 1%;
 }
 
-.sidenav h3 {
+.sidenav a>h3 {
     text-align: center;
     /* padding: 40px 8px 40px 16px; */
     /* padding-top: 8px; */
     /* padding-bottom: 16px; */
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 4vw;
     color: white;
     display: flex;
     margin: 0;
@@ -52,16 +52,7 @@ html {
     vertical-align: middle;
     justify-content: center;
     align-items: center;
-}
-
-.sidenav button {
-    text-align: center;
-
-    /* padding: 20px 8px 20px 16px; */
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
+    transform: rotate(-90deg);
 }
 
 .sidenav h3:hover {
@@ -70,16 +61,15 @@ html {
     cursor: pointer;
 }
 
+.sidenav a {
+    text-decoration: none;
+    color: white;
+}
+
 .tabContent {
     margin-left: 12%;
     padding: 0px 10px;
     display: none;
-}
-
-@media only screen and (max-width: 600px) {
-    .sidenav {
-        padding-top: 15px;
-    }
 }
 
 .iconBox {
@@ -134,15 +124,13 @@ html {
     width: 100%;
     flex-direction: column;
     justify-content: center;
-}
-
-.nameBox:hover {
-    background-color: #121212;
+    font-size: 3vw;
+    transform: rotate(-90deg);
 }
 
 .nameBox h2 {
     display: flex;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
     margin: 0;
     align-items: center;
     justify-content: center;
@@ -164,7 +152,7 @@ html {
 
 .sideLinks {
     font-size: 10vw;
-    height: 24.5%;
+    /* height: 24.5%; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -181,6 +169,8 @@ html {
     font-size: 6vw;
     margin: 0;
     transition-duration: 0.5s;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
 
 .portf>ul {
@@ -248,6 +238,19 @@ html {
 
 @media only screen and (min-width: 768px) {
 
+    .sidenav>a>h3 {
+        transform: rotate(0);
+        font-size: 2vw;
+    }
+
+    .nameBox {
+        transform: rotate(0);
+    }
+
+    .nameBox>h2 {
+        font-size: 1.5vw;
+    }
+
     .portf>ul>li:hover {
         margin: 0;
     }
@@ -259,6 +262,8 @@ html {
 
     .funkyText>h3 {
         font-size: 4vw;
+        padding-bottom: 0;
+        padding-top: 0;
     }
 
     .funkyText>h3:hover {
@@ -276,6 +281,7 @@ html {
         justify-content: center;
         align-items: flex-end;
     }
+
     #linkedin {
         padding-right: 10%;
     }
