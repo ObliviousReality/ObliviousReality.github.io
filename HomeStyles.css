@@ -27,29 +27,37 @@ html {
 
 .sidenav {
     height: 100%;
-    width: 13%;
+    width: 12%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #6B16A2;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 1%;
 }
 
 .sidenav h3 {
     text-align: center;
-    padding: 40px 8px 40px 16px;
+    /* padding: 40px 8px 40px 16px; */
+    /* padding-top: 8px; */
+    /* padding-bottom: 16px; */
     text-decoration: none;
     font-size: 2vw;
     color: white;
-    display: block;
+    display: flex;
     margin: 0;
+    height: 12.5%;
+    width: 100%;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidenav button {
     text-align: center;
-    padding: 20px 8px 20px 16px;
+
+    /* padding: 20px 8px 20px 16px; */
     text-decoration: none;
     font-size: 25px;
     color: white;
@@ -63,7 +71,7 @@ html {
 }
 
 .tabContent {
-    margin-left: 13%;
+    margin-left: 12%;
     padding: 0px 10px;
     display: none;
 }
@@ -72,6 +80,11 @@ html {
     .sidenav {
         padding-top: 15px;
     }
+}
+
+.iconBox {
+    text-align: center;
+    height: 10%;
 }
 
 .icon {
@@ -113,11 +126,55 @@ html {
     color: #6B16A2;
 }
 
+.nameBox {
+    text-align: center;
+    height: 12.5%;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nameBox:hover {
+    background-color: #121212;
+}
+
+.nameBox h2 {
+    display: flex;
+    font-size: 1.5vw;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.nameBox h4 {
+    text-align: center;
+    display: flex;
+    font-size: 0.8vw;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
 .selected {
     background-color: #121212;
     color: red;
 }
 
+.sideLinks {
+    font-size: 10vw;
+    height: 24.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fa-brands {
+    text-decoration: none;
+    color: white;
+}
 
 
 .funkyText>h3 {
@@ -156,6 +213,7 @@ html {
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     position: relative;
+    height: 75%;
 }
 
 .portf>ul>li>figure>img {
@@ -207,4 +265,18 @@ html {
         font-size: 5vw;
     }
 
+    .iconBox {
+        height: 21%;
+    }
+
+    .sideLinks {
+        height: 13.5%;
+        font-size: 4vw;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    #linkedin {
+        padding-right: 10%;
+    }
 }
