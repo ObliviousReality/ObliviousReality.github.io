@@ -68,13 +68,9 @@ html {
     display: none;
 }
 
-@media screen and (max-height: 450px) {
+@media only screen and (max-width: 600px) {
     .sidenav {
         padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
     }
 }
 
@@ -122,14 +118,21 @@ html {
     color: red;
 }
 
-.portf {
-    padding: 2rem;
+
+
+.funkyText>h3 {
+    font-size: 6vw;
+    margin: 0;
+    transition-duration: 0.5s;
 }
 
 .portf>ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2.5rem;
+    padding: 0;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 .portf>ul>li {
@@ -137,6 +140,13 @@ html {
     border: 1px solid #6B16A2;
     border-radius: .5rem;
     color: transparent;
+    padding: 0;
+    margin: 5%;
+    transition-duration: 0.25s;
+}
+
+.portf>ul>li:hover {
+    background-color: #303030;
 }
 
 .portf>ul>li>figure {
@@ -155,21 +165,21 @@ html {
 .portf>ul>li>figure>figcaption {
     position: absolute;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(107, 22, 162, .9);
     width: 100%;
 }
 
 .portf>ul>li>figure>figcaption>h3 {
     color: white;
-    padding: .75rem;
+    padding-left: .5rem;
     font-size: 1.25rem;
 }
 
 .portf>ul>li>p {
     font-size: 1rem;
     line-height: 1.5;
-    padding: 1rem .75rem;
-    color: #666666;
+    padding: 0 .75rem;
+    color: #cccccc;
 }
 
 .portf>ul>li>a {
@@ -177,12 +187,24 @@ html {
     margin: .5rem;
 }
 
-a {
-    background-color: goldenrod;
-    text-decoration: none;
-    color: white;
-    border-radius: .25rem;
-    text-align: center;
-    display: inline-block;
-    transition: all .3s;
+
+@media only screen and (min-width: 768px) {
+
+    .portf>ul>li:hover {
+        margin: 0;
+    }
+
+    .funkyText {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .funkyText>h3 {
+        font-size: 4vw;
+    }
+
+    .funkyText>h3:hover {
+        font-size: 5vw;
+    }
+
 }
