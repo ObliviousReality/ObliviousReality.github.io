@@ -27,7 +27,7 @@ html {
 
 .sidenav {
     height: 100%;
-    width: 12%;
+    width: 20%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -52,7 +52,6 @@ html {
     vertical-align: middle;
     justify-content: center;
     align-items: center;
-    transform: rotate(-90deg);
 }
 
 .sidenav h3:hover {
@@ -67,9 +66,10 @@ html {
 }
 
 .tabContent {
-    margin-left: 12%;
+    margin-left: 20%;
     padding: 0px 10px;
     display: none;
+    overflow: hidden;
 }
 
 .iconBox {
@@ -94,7 +94,7 @@ html {
 
 .icontext {
     font-family: myEpicFont;
-    font-size: 4vw;
+    font-size: 6vw;
     padding-top: 75%;
     position: absolute;
 
@@ -125,7 +125,6 @@ html {
     flex-direction: column;
     justify-content: center;
     font-size: 3vw;
-    transform: rotate(-90deg);
 }
 
 .nameBox h2 {
@@ -179,7 +178,7 @@ html {
     gap: 2.5rem;
     padding: 0;
     padding-right: 2.5%;
-    padding-left: 2.5%;
+    padding-left: 0;
 }
 
 .portf>ul>li {
@@ -188,7 +187,7 @@ html {
     border-radius: .5rem;
     color: transparent;
     padding: 0;
-    margin: 5%;
+    margin: 5% 5% 5% 0;
     transition-duration: 0.25s;
 }
 
@@ -243,6 +242,8 @@ html {
     display: flex;
     flex-direction: column;
     margin: 0;
+    padding: 0;
+    width: 110%;
 }
 
 .aboutItem>ul>li {
@@ -265,7 +266,7 @@ html {
 
 .aboutItem>ul>li>figure {
     margin: 0;
-    width: 15%;
+    width: 30%;
     overflow: hidden;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
@@ -281,10 +282,11 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
 }
 
 .aboutItemHeader>h5 {
-    font-size: 1.5vw;
+    font-size: 3vw;
     line-height: 1.5;
     padding: 0 .75rem;
     color: #cccccc;
@@ -293,14 +295,14 @@ html {
 }
 
 .aboutItemHeader>p {
-    font-size: 1vw;
+    font-size: 2vw;
     line-height: 1.5;
     padding: 0 .75rem;
     color: #cccccc;
 }
 
 .aboutItemHeader>h3 {
-    font-size: 2vw;
+    font-size: 4vw;
     line-height: 1.5;
     padding: 0 .75rem;
     color: #cccccc;
@@ -308,7 +310,7 @@ html {
 }
 
 .aboutItemHeader>span {
-    font-size: 2vw;
+    font-size: 4vw;
     line-height: 1.5;
     padding: 0 .75rem;
     color: #cccccc;
@@ -318,17 +320,29 @@ html {
 
 @media only screen and (min-width: 768px) {
 
-    .sidenav>a>h3 {
-        transform: rotate(0);
-        font-size: 2vw;
+    .sidenav {
+        width: 12%;
     }
 
-    .nameBox {
-        transform: rotate(0);
+    .tabContent {
+        margin-left: 12%;
+    }
+
+    .icontext {
+        font-size: 4vw;
+    }
+
+    .sidenav>a>h3 {
+        font-size: 2vw;
+        height: 12.5%;
     }
 
     .nameBox>h2 {
         font-size: 1.5vw;
+    }
+
+    .portf>ul>li {
+        margin: 5%;
     }
 
     .portf>ul>li:hover {
@@ -364,5 +378,30 @@ html {
 
     #linkedin {
         padding-right: 10%;
+    }
+
+    .aboutItem>ul {
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    .aboutItem>ul>li>figure {
+        width: 15%;
+    }
+
+    .aboutItemHeader>h5 {
+        font-size: 1.5vw;
+    }
+
+    .aboutItemHeader>p {
+        font-size: 1vw;
+    }
+
+    .aboutItemHeader>h3 {
+        font-size: 2vw;
+    }
+
+    .aboutItemHeader>span {
+        font-size: 2vw;
     }
 }
