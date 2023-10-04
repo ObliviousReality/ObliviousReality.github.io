@@ -29,45 +29,46 @@
 
     <div id="sectA" class="tabcontent">
         <h3>Why?</h3>
-        <p>The first game I ever created was <a href="epicChess.html">a game of Chess</a>¹, made in Python. It was
+        <p>The first game I ever created was <a href="epicChess.html">a game of Chess</a>, made in Python. It was
             terrible. It was actually my A Level Coursework for Computer Science, and earned me a B, but the game was so
             bad I instantly abandoned it. So it made sense then, when learning to use C++ to make applications, to
             recreate it. This time I had 5 years of development experience instead of none, 1 and half years of
-            University teaching, and the development of <a>a full game in Java</a> under my belt, a consiberable upgrade
+            University teaching, and the development of <a>a full game in Java</a> under my belt, a considerable upgrade
             from before. So began Epic Chess V2. </p>
         <h3>Development:</h3>
-        <p>Epic Chess V2 is a two player game of Chess, in a scaleable lightweight window. It's written in C++, and uses
+        <p>Epic Chess V2 is a two player game of Chess, in a scalable lightweight window. It's written in C++, and uses
             the SFML library for the graphics and window. This was my first time using SFML, having previous experience
             using the mostly abandoned Java port JSFML. One major thing I discovered in this project was the underlying
             differences between Java and C based languages. Moving from the more lenient and accepting JDK to the
             unforgiving G++ was a transition that required me to fully redesign the structure of the game multiple
             times. I had attempted to emulate the structure I had devised (without prior knowledge of game structures)
-            for Demon Dash, however this did not translate to C++ as it heavily relied on Cyclic Dependencies, which I
+            for Demon Dash, however this did not translate well to C++ as it heavily relied on Cyclic Dependencies,
+            which I
             had not realised until now. This was also the first time I had developed in full OOP in C++, and development
             was frequently stalled by constant Segmentation Faults in my code, but despite the immediate frustrations
             this proved to be a good way to learn the intricacies of OOP in C++.</p>
-        <p>The library itself proved to be generally dissapointing, and had greater differences to the Java version than
-            I initially expected. Later when using another graphics library in C++ I'd realise that SFML was mainly
+        <p>The library itself proved to be generally disappointing, and had greater differences to the Java version than
+            I had initially expected. Later when using another graphics library in C++ I'd realised that SFML was mainly
             difficult because of the way it had to be implemented. Other libraries (like SDL2 which I have since moved
-            to) allow free access to most of graphics enviroment through function calls to a global libarary, whereas
-            SFML works through passing the different elemtents around after they have been created, one the few
+            to) allow free access to most of graphics environment through function calls to a global library, whereas
+            SFML works through passing the different elements around after they have been created, one the few
             similarities to how it works in Java. However, as class relations had to be distinctly one way, this greatly
             slowed and complicated development.</p>
         <p>The other new element to me in this development was the IDE I used, Visual Studio 2019. I had previously only
-            had experience in it's baby sibling IDE Visual Studio Code, which has more of a text editor feel to it than
+            had experience in its little sibling IDE Visual Studio Code, which has more of a text editor feel to it than
             VS19, which is a fully fledged IDE with no feel of a text editor at all. Initially I was quite overwhelmed
-            with VS19, but with the help of a few Youtube tutorials I was able to get a good grasp of it. I will
-            definitely be using VS19 for future projects (also because I don't really have many other non-proprietry
+            with VS19, but with the help of a few YouTube tutorials I was able to get a good grasp of it. I will
+            definitely be using VS19 for future projects (also because I don't really have many other non-proprietary
             options).</p>
         <h3>Improvements over V1:</h3>
         <p>Where to start? The OOP design and the use of a language that wasn't Python allowed the game to run a lot
-            faster with no noticable lag, which says a large amount for how ineffecient the Python version was. I put
+            faster with no noticeable lag, which says a large amount for how inefficient the Python version was. I put a
             lot more attention into perfecting the graphics, and I think they are a lot cleaner and clearer in this
-            version. The move from fullscreen to a draggable, scaleable window made a large difference as well. </p>
+            version. The move from fullscreen to a draggable, scalable window made a large difference as well. </p>
         <h3>Improvements for V3:</h3>
-        <p>Firstly I don't plan on making a V3 or anything like this at the moment - this project has served its
-            purpose well. However, potential improvements would mostly consist of developing the game to either have internet
-            features to allow proper two-player gameplay or the development of an AI opponent to make the game
+        <p>Firstly, I don't plan on making a V3 or anything like this at the moment - this project has served its
+            purpose well. However, potential improvements would mostly consist of developing the game to either have
+            internet features to allow proper two-player gameplay or the development of an AI opponent to make the game
             singleplayer. However, both of these features are well above my current skill level, especially for a small
             project - I'd rather keep making bigger and more unique games from now instead of constantly making more
             chess.</p>
@@ -78,14 +79,15 @@
             discovered SDL2, which I plan to use in the future. It solves many of my main problems with SFML and is also
             widely popular within the community. Also interestingly when researching popular C++ graphics libraries I
             did not find any mention of SFML (which I found indirectly through a University project), suggesting that my
-            concerns are well placed and not unique. I now feel more comfortable with C++ itself, especially as I now have
-            working examples of C++ classes, inheritance and data structures that I can refer to in later projects. </p>
+            concerns are well placed and not unique. I now feel more comfortable with C++ itself, especially as I now
+            have working examples of C++ classes, inheritance and data structures that I can refer to in later projects. </p>
 
     </div>
     <div id="sectB" class="tabcontent">
         <h3>The Game:</h3>
         <p>A simple game of two-player chess. Nothing really complex to it.</p>
-        <p>This game served more as a development project rather than the creation of a good game, so see the Development section for the main information about this project.</p>
+        <p>This game served more as a development project rather than the creation of a good game, so see the
+            Development section for the main information about this project.</p>
         <br><br><br>
         <p>Screenshots coming soon.</p>
     </div>
