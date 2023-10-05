@@ -14,8 +14,8 @@
         <a href="#main">
             <div class="iconBox" onclick="openPage('main')" id="defaultOpen">
                 <div class="icon">
-                    <div class="icontext"><!--DO NOT SPLIT--><p class="O">O</p><p class="R">R</p><!--DO NOT SPLIT-->
-                    </div>
+                    <div class="icontext">
+                        <!--DO NOT SPLIT--><p class="O">O</p><p class="R">R</p><!--DO NOT SPLIT--></div>
                 </div>
             </div>
         </a>
@@ -68,15 +68,24 @@
         <section class="aboutItem">
             <ul>
                 <a style="text-decoration: none;" href="lib/TomLitherlandCV.pdf" download="TomLitherlandCV">
-                <li>
-                    <figure>
-                        <p style="color: white; font-size: 6vw;margin: 0;vertical-align: middle; text-align: center; padding-top: 10%;"><i class="fa-solid fa-file-lines"></i></p>
-                    </figure>
-                    <div class="aboutItemHeader">
-                        <h3>CV</h3>
-                        <p>Click here to download my CV!</p>
-                    </div>
-                </li>
+                    <li>
+                        <figure>
+                            <p
+                                style="color: white; font-size: 6vw;margin: 0;vertical-align: middle; text-align: center; padding-top: 10%;">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </p>
+                        </figure>
+                        <div class="aboutItemHeader">
+                            <h3>CV</h3>
+                            <p>Click here to download my CV!</p>
+                        </div>
+                        <figure>
+                            <p
+                                style="color: white; font-size: 6vw;margin: 0;vertical-align: middle; text-align: center; padding-top: 10%;">
+                                <i class="fa-solid fa-download"></i>
+                            </p>
+                        </figure>
+                    </li>
                 </a>
             </ul>
         </section>
@@ -148,14 +157,73 @@
     </div>
 
     <div class="tabContent" id="skills">
-        <p>skills</p>
+        <div class="languages">
+            <h3>Experienced</h3>
+            <div class="languagesBox">
+                <div class="languageItem">
+                    <img src="imgs/logos/c++.png" alt="c++" title="C/C++">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/python.png" alt="Python" title="Python">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/JavaScript-logo.png" alt="JavaScript" title="JavaScript">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/java.png" alt="Java" title="Java">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/git.png" alt="Git" title="Git">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/windows.png" alt="Windows" title="Windows">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/linux.png" alt="Linux" title="Linux">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/sqlite.png" alt="SQLite" title="SQLite">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/vscode.png" alt="Visual Studio Code" title="Visual Studio Code">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/office.png" alt="Microsoft Office" title="Microsoft Office">
+                </div>
+            </div>
+            <h3>Some Experience</h3>
+            <div class="languagesBox">
+                <div class="languageItem">
+                    <img src="imgs/logos/Typescript_logo_2020.svg.png" alt="TypeScript" title="TypeScript">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/vslogo.png" alt="Visual Studio" title="Visual Studio">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/eclipse.png" alt="Eclipse" title="Eclipse">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/processing.png" alt="Processing" title="Processing">
+                </div>
+
+            </div>
+            <h3>Learning</h3>
+            <div class="languagesBox">
+                <div class="languageItem">
+                    <img src="imgs/logos/csharp.png" alt="C#" title="C#">
+                </div>
+                <div class="languageItem">
+                    <img src="imgs/logos/docker.webp" alt="Docker" title="Docker">
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--https://codepen.io/imjuangarcia/pen/pGgmbe-->
     <div class="tabContent" id="portfolio">
         <button style="display: none;" onclick="shuffle()">Click</button>
         <section class="portf" id="portf">
-            <ul id = "portfolioList">
+            <ul id="portfolioList">
                 <li onclick="location.href='epicChess.html'">
                     <figure>
                         <img src="imgs/epicchesslogoHD.png">
@@ -167,7 +235,7 @@
                 </li>
                 <li onclick="location.href='raytracing.html'">
                     <figure>
-                        <img src="imgs/processing.png">
+                        <img src="imgs/logos/processing.png">
                         <figcaption>
                             <h3>2D RayTracing</h3>
                         </figcaption>
@@ -185,7 +253,7 @@
                 </li>
                 <li onclick="location.href=''">
                     <figure>
-                        <img src="imgs/c++.png">
+                        <img src="imgs/logos/c++.png">
                         <figcaption>
                             <h3>The Oblivious Engine</h3>
                         </figcaption>
@@ -194,7 +262,7 @@
                 </li>
                 <li onclick="location.href=''">
                     <figure>
-                        <img src="imgs/processing.png">
+                        <img src="imgs/logos/processing.png">
                         <figcaption>
                             <h3>Processing Apps</h3>
                         </figcaption>
@@ -212,7 +280,7 @@
                 </li>
                 <li onclick="location.href=''">
                     <figure>
-                        <img src="imgs/weka.png">
+                        <img src="imgs/logos/weka.png">
                         <figcaption>
                             <h3>Machine Learning in APR</h3>
                         </figcaption>
@@ -239,7 +307,7 @@
     <script>
         function shuffle() {
             var list = document.getElementById("portfolioList");
-            for (let i = list.children.length; i>=0; i--){
+            for (let i = list.children.length; i >= 0; i--) {
                 list.appendChild(list.children[Math.random() * i | 0]);
             }
         }
