@@ -374,6 +374,17 @@ html {
     width: 100%;
 }
 
+.contactBox {
+    width: 90%;
+    background-color: whitesmoke;
+    border: #6B16A2 2px solid;
+    text-align: center;
+    color: #121212;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border-radius: 20px;
+}
+
 @media only screen and (min-width: 768px) {
 
     .sidenav {
@@ -473,6 +484,14 @@ html {
     .languageItem {
         width: 10%;
         padding: 5px;
+    }
+
+    .contactBox {
+        width: 80%;
+        margin-bottom: 0;
+        margin-top: 2%;
+        margin-left: 10%;
+        font-size: 2vw;
     }
 }
 
