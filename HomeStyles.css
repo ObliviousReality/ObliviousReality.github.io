@@ -255,21 +255,18 @@ html {
 }
 
 .aboutItem>ul>li {
-    background-color: #181818;
+    background-color: #242424;
     border: 1px solid #6B16A2;
     border-radius: .5rem;
     color: transparent;
     padding: 0;
-    margin: 1% 5%;
+    margin: 0.5% 5%;
     transition-duration: 0.25s;
     width: 80%;
     display: flex;
     flex-direction: row;
     max-height: 20%;
-}
 
-.aboutItem>ul>li:hover {
-    background-color: #303030;
 }
 
 .aboutItem>ul>li>figure {
@@ -455,6 +452,10 @@ html {
     .aboutItem>ul {
         width: 100%;
         padding-left: 5%;
+    }
+
+    .aboutItem>ul>li:hover {
+        box-shadow: 0 0 4px 4px #6B16A2;
     }
 
     .aboutItem>ul>li>figure {
