@@ -294,13 +294,10 @@
                                     nextIsCap = true;
                                 }
                                 else {
-                                    console.log(nextIsCap ? char.toUpperCase() : char);
                                     externalName = externalName + (nextIsCap ? char.toUpperCase() : char);
                                     nextIsCap = false;
                                 }
                             });
-                            console.log(internalName);
-                            console.log(externalName);
                             skillItem.src = "imgs/skills/" + internalName + ".png";
                             skillItem.alt = externalName;
                             skillItem.title = externalName;
