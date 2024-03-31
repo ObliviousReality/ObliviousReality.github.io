@@ -168,70 +168,7 @@
     </div>
 
     <div class="tabContent" id="skills">
-        <div class="languages">
-            <h3>Experienced</h3>
-            <div class="languagesBox">
-                <div class="languageItem">
-                    <img src="imgs/skills/c++.png" alt="c++" title="C/C++">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/python.png" alt="Python" title="Python">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/javascript.png" alt="JavaScript" title="JavaScript">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/java.png" alt="Java" title="Java">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/git.png" alt="Git" title="Git">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/windows.png" alt="Windows" title="Windows">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/linux.png" alt="Linux" title="Linux">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/sqlite.png" alt="SQLite" title="SQLite">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/vscode.png" alt="Visual Studio Code" title="Visual Studio Code">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/office.png" alt="Microsoft Office" title="Microsoft Office">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/vslogo.png" alt="Visual Studio" title="Visual Studio">
-                </div>
-            </div>
-            <h3>Some Experience</h3>
-            <div class="languagesBox">
-                <div class="languageItem">
-                    <img src="imgs/skills/typescript.png" alt="TypeScript" title="TypeScript">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/html.png" alt="HTML" title="HTML">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/eclipse.png" alt="Eclipse" title="Eclipse">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/processing.png" alt="Processing" title="Processing">
-                </div>
-            </div>
-            <h3>Learning</h3>
-            <div class="languagesBox">
-                <div class="languageItem">
-                    <img src="imgs/skills/csharp.png" alt="C#" title="C#">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/docker.webp" alt="Docker" title="Docker">
-                </div>
-                <div class="languageItem">
-                    <img src="imgs/skills/react.png" alt="React" title="React">
-                </div>
-            </div>
+        <div class="languages" id="skillTest">
         </div>
     </div>
 
@@ -331,6 +268,38 @@
     </div>
 
     <script>
+        function loadSkillsData() {
+            var file = new XMLHttpRequest();
+            file.open("GET", "skills.json", true);
+            file.onreadystatechange = () => {
+                if (file.readyState == 4) {
+                    var parent = document.querySelector("#skillTest");
+                    var text = file.responseText;
+                    var data = JSON.parse(text);
+                    Object.keys(data).forEach((item) => {
+                        console.log(item);
+                        let header = document.createElement("h3");
+                        header.textContent = item;
+                        header.id = item;
+                        let headerDiv = document.createElement("div");
+                        headerDiv.classList.add("languagesBox");
+                        data[item].forEach((skill) => {
+                            let skillDiv = document.createElement("div");
+                            skillDiv.classList.add("languageItem");
+                            let skillItem = document.createElement("img");
+                            skillItem.src = "imgs/skills/" + skill + ".png";
+                            skillItem.alt = skill;
+                            skillItem.title = skill;
+                            skillDiv.appendChild(skillItem);
+                            headerDiv.appendChild(skillDiv);
+                        });
+                        parent.appendChild(header);
+                        parent.appendChild(headerDiv);
+                    });
+                }
+            }
+            file.send();
+        }
         function shuffle() {
             var list = document.getElementById("portfolioList");
             for (let i = list.children.length; i >= 0; i--) {
@@ -363,6 +332,7 @@
             openPage("main");
         }
         shuffle();
+        loadSkillsData();
     </script>
 </body>
 
