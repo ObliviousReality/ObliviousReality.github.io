@@ -29,7 +29,7 @@ html {
 }
 
 .parallax {
-    background-image: url("imgs/epicChessV2.png");
+    background-image: url("imgs/page/epicchessV2/epicChessV2.png");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -40,7 +40,7 @@ html {
 }
 
 .p2 {
-    background-image: url("imgs/epicChessV2Code.png");
+    background-image: url("imgs/page/epicchessV2/epicChessV2Code.png");
     filter: blur(0.5px);
     -webkit-filter: blur(0.5px);
 }
