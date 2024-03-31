@@ -277,7 +277,6 @@
                     var text = file.responseText;
                     var data = JSON.parse(text);
                     Object.keys(data).forEach((item) => {
-                        console.log(item);
                         let header = document.createElement("h3");
                         header.textContent = item;
                         header.id = item;
@@ -287,9 +286,24 @@
                             let skillDiv = document.createElement("div");
                             skillDiv.classList.add("languageItem");
                             let skillItem = document.createElement("img");
-                            skillItem.src = "imgs/skills/" + skill + ".png";
-                            skillItem.alt = skill;
-                            skillItem.title = skill;
+                            var internalName = skill.replaceAll("^", "").replaceAll(" ", "");
+                            var externalName = "";
+                            let nextIsCap = false;
+                            Array.from(skill).forEach((char) => {
+                                if (char == "^") {
+                                    nextIsCap = true;
+                                }
+                                else {
+                                    console.log(nextIsCap ? char.toUpperCase() : char);
+                                    externalName = externalName + (nextIsCap ? char.toUpperCase() : char);
+                                    nextIsCap = false;
+                                }
+                            });
+                            console.log(internalName);
+                            console.log(externalName);
+                            skillItem.src = "imgs/skills/" + internalName + ".png";
+                            skillItem.alt = externalName;
+                            skillItem.title = externalName;
                             skillDiv.appendChild(skillItem);
                             headerDiv.appendChild(skillDiv);
                         });

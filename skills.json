@@ -1,27 +1,27 @@
 {
     "Experienced": [
-        "C++",
-        "Python",
-        "Javascript",
-        "Java",
-        "Git",
-        "Windows",
-        "Linux",
-        "Ubuntu",
-        "SQlite",
-        "VSCode",
-        "Office",
-        "VisualStudio"
+        "^c++",
+        "^python",
+        "^java^script",
+        "^java",
+        "^git",
+        "^windows",
+        "^linux",
+        "^ubuntu",
+        "^s^q^lite",
+        "^v^s^code",
+        "^microsoft ^office",
+        "^visual ^studio"
     ],
     "Some Experience": [
-        "Typescript",
-        "HTML",
-        "Eclipse",
-        "Processing"
+        "^type^script",
+        "^h^t^m^l",
+        "^eclipse",
+        "^processing"
     ],
     "Learning": [
-        "CSharp",
-        "Docker",
-        "React"
+        "^c^sharp",
+        "^docker",
+        "^react"
     ]
 }
