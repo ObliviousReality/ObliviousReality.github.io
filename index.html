@@ -262,10 +262,11 @@
     <div class="tabContent" id="contact">
         <div class="contactBox">
             <p>The best method of communication is email!</p>
-            <p>I can be reached at:</p>
-            <a href="mailto:tomas.litherland@virginmedia.com">
-                <p>tomas.litherland@virginmedia.com</p>
-            </a>
+            <p style="margin-bottom: 0;">Complete Captcha to see my email!</p>
+            <div style="display: flex; justify-content: center; margin: 2%;" id="RecaptchaField1"></div>
+            <div id="emailBox" style="display: none; margin: 0;">
+                <p id="leftEmail" style="display: inline-block; margin-top: 0;"></p><span style="display: none;">THIS SHOULD NOT BE SHOWN!</span><p id="rightEmail" style="display: inline-block; margin-top: 0;"></p>
+            </div>
         </div>
         <div class="contactBox">
             <p>Alternatively, feel free to send me a message on LinkedIn!</p>
@@ -274,6 +275,12 @@
     </div>
 
     <script>
+        function onCaptchaComplete() {
+            document.getElementById("emailBox").style.display = "inline";
+            document.getElementById("leftEmail").innerHTML = "tomas.litherland";
+            document.getElementById("rightEmail").innerHTML = "@virginmedia.com";
+        }
+
         function loadSkillsData() {
             var file = new XMLHttpRequest();
             file.open("GET", "skills.json", true);
@@ -317,6 +324,7 @@
             }
             file.send();
         }
+
         function shuffle() {
             var list = document.getElementById("portfolioList");
             for (let i = list.children.length; i >= 0; i--) {
@@ -339,6 +347,7 @@
             if (target != "main")
                 document.getElementById(target + "Button").classList.add("selected");
         }
+
         var urlVal = window.location.href.split("#")[1];
         if (urlVal) {
             document.getElementById(urlVal).style.display = "block";
@@ -348,9 +357,21 @@
         else {
             openPage("main");
         }
+
         shuffle();
         loadSkillsData();
+
+        var CaptchaCallback = function () {
+                grecaptcha.render('RecaptchaField1', {
+                    'sitekey': '6LclObMpAAAAALM-uUDS-fJf_HqnPDojwi4tmW_y',
+                    'callback': onCaptchaComplete
+                });
+        };
     </script>
 </body>
+
+<footer>
+    <script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit' async defer></script>
+</footer>
 
 </html>
