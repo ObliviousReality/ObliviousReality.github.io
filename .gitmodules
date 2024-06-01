@@ -1,0 +1,3 @@
+[submodule "lib/Code/ObliviousHangman"]
+	path = lib/Code/ObliviousHangman
+	url = https://github.com/ObliviousReality/ObliviousHangman.git
