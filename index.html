@@ -295,7 +295,9 @@
                         header.id = item;
                         let headerDiv = document.createElement("div");
                         headerDiv.classList.add("languagesBox");
-                        data[item].forEach((skill) => {
+                        let listOfSkills = data[item];
+                        listOfSkills.sort();
+                        listOfSkills.forEach((skill) => {
                             let skillDiv = document.createElement("div");
                             skillDiv.classList.add("languageItem");
                             let skillItem = document.createElement("img");
