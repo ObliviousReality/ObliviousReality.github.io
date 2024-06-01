@@ -2,3 +2,6 @@
 	path = lib/Code/ObliviousHangman
 	url = https://github.com/ObliviousReality/ObliviousHangman.git
 	branch = Website
+[submodule "lib/Code/HexOfLife"]
+	path = lib/Code/HexOfLife
+	url = https://github.com/ObliviousReality/HexOfLife.git
