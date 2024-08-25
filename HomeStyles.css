@@ -365,6 +365,7 @@ html {
 .languageItem {
     width: 20%;
     float: left;
+    padding: 1% 0% 1% 0%;
 }
 
 .languageItem>img {
@@ -484,7 +485,7 @@ html {
 
     .languageItem {
         width: 10%;
-        padding: 5px;
+        padding: 1% 0% 1% 0%;
     }
 
     .contactBox {
