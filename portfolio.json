@@ -1,0 +1,113 @@
+{
+    "epicchess": {
+        "title": "Epic Chess",
+        "description": "Tom's Epic Chess, my A-Level Coursework. Not particularly demonstative of my skills.",
+        "writeup-link": "epicChess.html",
+        "github-link": "https://github.com/ObliviousReality/TomsEpicChess",
+        "image-name": "imgs/logos/epicchesslarge.png",
+        "tags": [
+            "python",
+            "old",
+            "education",
+            "games"
+        ]
+    },
+    "raytracing": {
+        "title": "2D RayTracing",
+        "description": "Ray Tracing Experiments in Processing.",
+        "writeup-link": "raytracing.html",
+        "github-link": "https://github.com/ObliviousReality/RayTracingTest",
+        "image-name": "imgs/skills/processing.png",
+        "tags": [
+            "processing"
+        ]
+    },
+    "epicchessv2": {
+        "title": "Epic Chess V2",
+        "description": "Tom's Epic Chess but in C++.",
+        "writeup-link": "EpicChessV2.html",
+        "github-link": "https://github.com/ObliviousReality/EpicChessV2",
+        "image-name": "imgs/page/epicchessV2/epicChessV2.png",
+        "tags": [
+            "c++",
+            "games"
+        ]
+    },
+    "processing": {
+        "title": "Processing Apps",
+        "description": "A few simple apps in processing, including a Sudoku Solver.",
+        "writeup-link": "processing.html",
+        "github-link": "https://github.com/ObliviousReality/SudokoSolver",
+        "image-name": "imgs/skills/processing.png",
+        "tags": [
+            "processing",
+            "incomplete"
+        ]
+    },
+    "obliviousengine": {
+        "title": "The Oblivious Engine",
+        "description": "A C++ 2D Game Engine.",
+        "writeup-link": "",
+        "github-link": "https://github.com/ObliviousReality/ObliviousEngine",
+        "image-name": "imgs/logos/obliviousengine.png",
+        "tags": [
+            "c++",
+            "incomplete",
+            "games"
+        ]
+    },
+    "indoorlocalisation": {
+        "title": "Indoor Localisation",
+        "description": "My 4th Year Disseration, Indoor Localisation with Microbits.",
+        "writeup-link": "",
+        "github-link": "https://github.com/ObliviousReality/Microbit-Indoor-Localisation",
+        "image-name": "imgs/logos/microbit.png",
+        "tags": [
+            "c++",
+            "education"
+        ]
+    },
+    "apr": {
+        "title": "Machine Learning in APR",
+        "description": "My 3rd Year Disseration, Classification in Automated Program Repair.",
+        "writeup-link": "",
+        "github-link": "",
+        "image-name": "imgs/logos/weka.png",
+        "tags": [
+            "education"
+        ]
+    },
+    "oblivioustweaks": {
+        "title": "ObliviousTweaks",
+        "description": "An experiment in Modding Minecraft.",
+        "writeup-link": "https://www.curseforge.com/minecraft/mc-mods/oblivious-tweaks",
+        "github-link": "https://github.com/ObliviousReality/ObliviousTweaks",
+        "image-name": "imgs/logos/oblivioustweaks.png",
+        "tags": [
+            "java",
+            "games"
+        ]
+    },
+    "hangman": {
+        "title": "Games!",
+        "description": "A selection of Games written in JavaScript.",
+        "writeup-link": "JS-Games/games.html",
+        "github-link": "https://github.com/ObliviousReality/ObliviousHangman",
+        "image-name": "imgs/skills/javascript.png",
+        "tags": [
+            "javascript",
+            "games"
+        ]
+    },
+    "jsgames": {
+        "title": "Hangman!",
+        "description": "A game of Hangman made in Processing.",
+        "writeup-link": "hangman.html",
+        "github-link": "https://github.com/ObliviousReality/ObliviousHangman",
+        "image-name": "imgs/logos/hangman.png",
+        "tags": [
+            "processing",
+            "games"
+        ]
+    }
+}
