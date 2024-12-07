@@ -339,7 +339,9 @@
 
         function buildTagButtons() {
             var parent = document.querySelector("#tagList");
-            allTags.forEach(element => {
+            let sortedTags = Array.from(allTags).sort();
+
+            sortedTags.forEach(element => {
                 let button = document.createElement("button");
                 button.setAttribute("onclick", "selectTag('" + element + "')");
                 button.textContent = element;
