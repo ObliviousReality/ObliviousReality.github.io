@@ -313,6 +313,7 @@
 
         function buildPortfolio() {
             var parent = document.querySelector("#portfolioList");
+            parent.replaceChildren();
             portfolioElements.forEach(element => {
                 if (selectedTags.size) {
                     element.classList.forEach(c => {
@@ -334,8 +335,10 @@
             var parent = document.querySelector("#tagList");
             allTags.forEach(element => {
                 let button = document.createElement("button");
+                button.setAttribute("onclick", "selectTag('" + element + "')");
                 button.textContent = element;
                 button.classList.add("tagButton");
+                button.id = "tagButton" + element;
                 parent.appendChild(button);
             });
         }
@@ -347,6 +350,19 @@
                     list.appendChild(list.children[Math.random() * i | 0]);
                 }
             }
+        }
+
+        function selectTag(tag) {
+            if (selectedTags.has(tag)) {
+                selectedTags.delete(tag);
+                document.getElementById("tagButton" + tag).classList.remove("tagButtonSelected");
+            }
+            else {
+                selectedTags.add(tag);
+                document.getElementById("tagButton" + tag).classList.add("tagButtonSelected");
+            }
+            console.log(selectedTags);
+            buildPortfolio();
         }
 
         function openPage(target) {
