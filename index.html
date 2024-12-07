@@ -180,7 +180,6 @@
 
     <!--https://codepen.io/imjuangarcia/pen/pGgmbe-->
     <div class="tabContent" id="portfolio">
-        <button style="display: none;" onclick="shuffle()">Click</button>
         <div id="tagList" class="tagList"></div>
         <section class="portf" id="portf">
             <ul id="portfolioList">
@@ -300,9 +299,19 @@
                     var parent = document.querySelector("#portfolioList");
                     var text = file.responseText;
                     var data = JSON.parse(text);
+                    let tempElementList = [];
                     Object.keys(data).forEach((item) => {
                         let newElement = createPortfolioElement(item, data);
-                        portfolioElements.push(newElement);
+                        tempElementList.push(newElement);
+                    });
+                    let numElems = tempElementList.length;
+                    portfolioElements = new Array(numElems);
+                    tempElementList.forEach(tElem => {
+                        let pos = Math.floor(Math.random() * numElems);
+                        while (portfolioElements[pos]) {
+                            pos = Math.floor(Math.random() * numElems);
+                        }
+                        portfolioElements[pos] = tElem;
                     });
                     buildPortfolio();
                     buildTagButtons();
@@ -326,9 +335,6 @@
                     parent.appendChild(element);
                 }
             });
-            if (portfolioElements.length) {
-                shuffle();
-            }
         }
 
         function buildTagButtons() {
@@ -341,15 +347,6 @@
                 button.id = "tagButton" + element;
                 parent.appendChild(button);
             });
-        }
-
-        function shuffle() {
-            var list = document.getElementById("portfolioList");
-            if (list.length) {
-                for (let i = list.children.length; i >= 0; i--) {
-                    list.appendChild(list.children[Math.random() * i | 0]);
-                }
-            }
         }
 
         function selectTag(tag) {
