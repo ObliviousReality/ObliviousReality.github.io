@@ -181,7 +181,7 @@
     <!--https://codepen.io/imjuangarcia/pen/pGgmbe-->
     <div class="tabContent" id="portfolio">
         <button style="display: none;" onclick="shuffle()">Click</button>
-        <div id="tagList"></div>
+        <div id="tagList" class="tagList"></div>
         <section class="portf" id="portf">
             <ul id="portfolioList">
             </ul>
@@ -335,6 +335,7 @@
             allTags.forEach(element => {
                 let button = document.createElement("button");
                 button.textContent = element;
+                button.classList.add("tagButton");
                 parent.appendChild(button);
             });
         }

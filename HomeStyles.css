@@ -180,6 +180,30 @@ html {
     padding-top: 5%;
 }
 
+.tagList {
+    display: flex;
+    justify-content: center;
+}
+
+.tagButton {
+    background-color: #6B16A2;
+    padding: 0% 1% 0% 1%;
+    margin: 0.5rem;
+    border: none;
+    font-family: Bahnschrift;
+    font-size: large;
+    border-radius: 2rem;
+    transition-duration: 0.5s;
+}
+
+.tagButton:hover {
+    background-color: red;
+}
+
+.tagButtonSelected {
+    background-color: red;
+}
+
 .portf>ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
