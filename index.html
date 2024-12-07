@@ -183,96 +183,6 @@
         <button style="display: none;" onclick="shuffle()">Click</button>
         <section class="portf" id="portf">
             <ul id="portfolioList">
-                <li onclick="location.href='epicChess.html'">
-                    <figure>
-                        <img src="imgs/logos/epicchesslarge.png">
-                        <figcaption>
-                            <h3>Epic Chess</h3>
-                        </figcaption>
-                    </figure>
-                    <p>Tom's Epic Chess, my A-Level Coursework. Not particularly demonstative of my skills.</p>
-                </li>
-                <li onclick="location.href='raytracing.html'">
-                    <figure>
-                        <img src="imgs/skills/processing.png">
-                        <figcaption>
-                            <h3>2D RayTracing</h3>
-                        </figcaption>
-                    </figure>
-                    <p>Ray Tracing Experiments in Processing</p>
-                </li>
-                <li onclick="location.href='EpicChessV2.html'">
-                    <figure>
-                        <img src="imgs/page/epicchessV2/epicChessV2.png">
-                        <figcaption>
-                            <h3>Epic Chess V2</h3>
-                        </figcaption>
-                    </figure>
-                    <p>Tom's Epic Chess but in C++</p>
-                </li>
-                <li onclick="location.href=''">
-                    <figure>
-                        <img src="imgs/logos/obliviousengine.png">
-                        <figcaption>
-                            <h3>The Oblivious Engine</h3>
-                        </figcaption>
-                    </figure>
-                    <p>A C++ 2D Game Engine</p>
-                </li>
-                <li onclick="location.href='processing.html'">
-                    <figure>
-                        <img src="imgs/skills/processing.png">
-                        <figcaption>
-                            <h3>Processing Apps</h3>
-                        </figcaption>
-                    </figure>
-                    <p>A few simple apps in processing, including a Sudoku Solver</p>
-                </li>
-                <li onclick="location.href=''">
-                    <figure>
-                        <img src="imgs/logos/microbit.png">
-                        <figcaption>
-                            <h3>Indoor Localisation</h3>
-                        </figcaption>
-                    </figure>
-                    <p>My 4th Year Disseration, Indoor Localisation with Microbits</p>
-                </li>
-                <li onclick="location.href=''">
-                    <figure>
-                        <img src="imgs/logos/weka.png">
-                        <figcaption>
-                            <h3>Machine Learning in APR</h3>
-                        </figcaption>
-                    </figure>
-                    <p>My 3rd Year Disseration, Classification in Automated Program Repair</p>
-                </li>
-                <li onclick="location.href='https://www.curseforge.com/minecraft/mc-mods/oblivious-tweaks'">
-                    <figure>
-                        <img src="imgs/logos/oblivioustweaks.png">
-                        <figcaption>
-                            <h3>ObliviousTweaks</h3>
-                        </figcaption>
-                    </figure>
-                    <p>An experiment in Modding Minecraft</p>
-                </li>
-                <li onclick="location.href='hangman.html'">
-                    <figure>
-                        <img src="imgs/logos/hangman.png">
-                        <figcaption>
-                            <h3>Hangman!</h3>
-                        </figcaption>
-                    </figure>
-                    <p>A game of Hangman made in Processing</p>
-                </li>
-                <li onclick="location.href='JS-Games/games.html'">
-                    <figure>
-                        <img src="imgs/skills/javascript.png">
-                        <figcaption>
-                            <h3>Games!</h3>
-                        </figcaption>
-                    </figure>
-                    <p>A selection of Games written in Javascript</p>
-                </li>
             </ul>
         </section>
     </div>
@@ -283,7 +193,9 @@
             <p style="margin-bottom: 0;">Complete Captcha to see my email!</p>
             <div style="display: flex; justify-content: center; margin: 2%;" id="RecaptchaField1"></div>
             <div id="emailBox" style="display: none; margin: 0;">
-                <p id="leftEmail" style="display: inline-block; margin-top: 0;"></p><span style="display: none;">THIS SHOULD NOT BE SHOWN!</span><p id="rightEmail" style="display: inline-block; margin-top: 0;"></p>
+                <p id="leftEmail" style="display: inline-block; margin-top: 0;"></p><span style="display: none;">THIS
+                    SHOULD NOT BE SHOWN!</span>
+                <p id="rightEmail" style="display: inline-block; margin-top: 0;"></p>
             </div>
         </div>
         <div class="contactBox">
@@ -293,6 +205,10 @@
     </div>
 
     <script>
+        var portfolioElements = [];
+        var selectedTags = new Set();
+        var allTags = new Set();
+
         function onCaptchaComplete() {
             document.getElementById("emailBox").style.display = "inline";
             document.getElementById("leftEmail").innerHTML = "tomas.litherland";
@@ -345,6 +261,65 @@
             file.send();
         }
 
+        function createPortfolioElement(element, data) {
+            let accessor = data[element]
+            let liElement = document.createElement("li");
+            liElement.setAttribute("onclick", "location.href='" + accessor["writeup-link"] + "'");
+            accessor["tags"].forEach(element => {
+                liElement.classList.add(element);
+                allTags.add(element);
+            });
+            {
+                let figureElement = document.createElement("figure");
+                {
+                    let imgElement = document.createElement("img");
+                    imgElement.src = accessor["image-name"];
+                    figureElement.appendChild(imgElement);
+                    {
+                        let figCaptionElement = document.createElement("figcaption");
+                        let h3Element = document.createElement("h3");
+                        h3Element.textContent = accessor["title"];
+                        figCaptionElement.appendChild(h3Element);
+                        figureElement.appendChild(figCaptionElement);
+                    }
+                }
+                liElement.appendChild(figureElement);
+                let pElement = document.createElement("p");
+                pElement.textContent = accessor["description"];
+                liElement.appendChild(pElement);
+            }
+            return liElement;
+        }
+
+        function loadPortfolioData() {
+            var file = new XMLHttpRequest();
+            file.open("GET", "portfolio.json", true);
+            file.onreadystatechange = () => {
+                if (file.readyState == 4) {
+                    var parent = document.querySelector("#portfolioList");
+                    var text = file.responseText;
+                    var data = JSON.parse(text);
+                    Object.keys(data).forEach((item) => {
+                        let newElement = createPortfolioElement(item, data);
+                        portfolioElements.push(newElement);
+                    });
+                    buildPortfolio();
+                }
+            }
+            file.send();
+        }
+
+        function buildPortfolio() {
+            var parent = document.querySelector("#portfolioList");
+            portfolioElements.forEach(element => {
+                parent.appendChild(element);
+            });
+            if (portfolioElements.length)
+            {
+                shuffle();
+            }
+        }
+
         function shuffle() {
             var list = document.getElementById("portfolioList");
             for (let i = list.children.length; i >= 0; i--) {
@@ -378,14 +353,14 @@
             openPage("main");
         }
 
-        shuffle();
         loadSkillsData();
+        loadPortfolioData();
 
         var CaptchaCallback = function () {
-                grecaptcha.render('RecaptchaField1', {
-                    'sitekey': '6LclObMpAAAAALM-uUDS-fJf_HqnPDojwi4tmW_y',
-                    'callback': onCaptchaComplete
-                });
+            grecaptcha.render('RecaptchaField1', {
+                'sitekey': '6LclObMpAAAAALM-uUDS-fJf_HqnPDojwi4tmW_y',
+                'callback': onCaptchaComplete
+            });
         };
     </script>
 </body>
