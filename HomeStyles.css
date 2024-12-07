@@ -181,23 +181,19 @@ html {
 }
 
 .tagList {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    width: 100%;
 }
 
 .tagButton {
     background-color: #6B16A2;
-    padding: 0% 1% 0% 1%;
-    margin: 0.5rem;
     border: none;
     font-family: Bahnschrift;
-    font-size: large;
+    font-size: 5vw;
     border-radius: 2rem;
     transition-duration: 0.5s;
-}
-
-.tagButton:hover {
-    background-color: red;
+    margin: 1%;
 }
 
 .tagButtonSelected {
@@ -206,11 +202,11 @@ html {
 
 .portf>ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(1, minmax(100%, 1fr));
     padding: 0;
     padding-right: 2.5%;
-    padding-left: 0;
+    padding-left: 2.5%;
+    margin-top: 0;
 }
 
 .portf>ul>li {
@@ -229,7 +225,7 @@ html {
 
 .portf>ul>li>figure {
     margin: 0;
-    max-height: 280px;
+    max-height: 100%;
     overflow: hidden;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
@@ -429,6 +425,25 @@ html {
     .nameBox>h2 {
         font-size: 1.5vw;
     }
+
+    .tagList {
+        grid-template-columns: repeat(10, minmax(10%, 1fr));
+    }
+
+    .tagButton {
+        padding: 0% 1% 0% 1%;
+        margin: 0.5rem;
+        font-size: 1vw;
+    }
+
+    .tagButton:hover {
+        background-color: red;
+    }
+
+    .portf>ul {
+        grid-template-columns: repeat(5, minmax(20%, 1fr));
+    }
+
 
     .portf>ul>li {
         margin: 5%;
