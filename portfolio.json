@@ -6,10 +6,10 @@
         "github-link": "https://github.com/ObliviousReality/TomsEpicChess",
         "image-name": "imgs/logos/epicchesslarge.png",
         "tags": [
-            "python",
-            "old",
-            "education",
-            "games"
+            "Python",
+            "Old",
+            "Education",
+            "Games"
         ]
     },
     "raytracing": {
@@ -19,7 +19,7 @@
         "github-link": "https://github.com/ObliviousReality/RayTracingTest",
         "image-name": "imgs/skills/processing.png",
         "tags": [
-            "processing"
+            "Processing"
         ]
     },
     "epicchessv2": {
@@ -29,8 +29,8 @@
         "github-link": "https://github.com/ObliviousReality/EpicChessV2",
         "image-name": "imgs/page/epicchessV2/epicChessV2.png",
         "tags": [
-            "c++",
-            "games"
+            "C++",
+            "Games"
         ]
     },
     "processing": {
@@ -40,8 +40,8 @@
         "github-link": "https://github.com/ObliviousReality/SudokoSolver",
         "image-name": "imgs/skills/processing.png",
         "tags": [
-            "processing",
-            "incomplete"
+            "Processing",
+            "Incomplete"
         ]
     },
     "obliviousengine": {
@@ -51,9 +51,9 @@
         "github-link": "https://github.com/ObliviousReality/ObliviousEngine",
         "image-name": "imgs/logos/obliviousengine.png",
         "tags": [
-            "c++",
-            "incomplete",
-            "games"
+            "C++",
+            "Incomplete",
+            "Games"
         ]
     },
     "indoorlocalisation": {
@@ -63,8 +63,8 @@
         "github-link": "https://github.com/ObliviousReality/Microbit-Indoor-Localisation",
         "image-name": "imgs/logos/microbit.png",
         "tags": [
-            "c++",
-            "education"
+            "C++",
+            "Education"
         ]
     },
     "apr": {
@@ -74,7 +74,7 @@
         "github-link": "",
         "image-name": "imgs/logos/weka.png",
         "tags": [
-            "education"
+            "Education"
         ]
     },
     "oblivioustweaks": {
@@ -84,8 +84,8 @@
         "github-link": "https://github.com/ObliviousReality/ObliviousTweaks",
         "image-name": "imgs/logos/oblivioustweaks.png",
         "tags": [
-            "java",
-            "games"
+            "Java",
+            "Games"
         ]
     },
     "hangman": {
@@ -95,8 +95,8 @@
         "github-link": "https://github.com/ObliviousReality/ObliviousHangman",
         "image-name": "imgs/skills/javascript.png",
         "tags": [
-            "javascript",
-            "games"
+            "Javascript",
+            "Games"
         ]
     },
     "jsgames": {
@@ -106,8 +106,8 @@
         "github-link": "https://github.com/ObliviousReality/ObliviousHangman",
         "image-name": "imgs/logos/hangman.png",
         "tags": [
-            "processing",
-            "games"
+            "Processing",
+            "Games"
         ]
     }
 }
