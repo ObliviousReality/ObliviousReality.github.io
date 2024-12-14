@@ -19,7 +19,8 @@
         "github-link": "https://github.com/ObliviousReality/RayTracingTest",
         "image-name": "imgs/skills/processing.png",
         "tags": [
-            "Processing"
+            "Processing",
+            "Web"
         ]
     },
     "epicchessv2": {
@@ -41,7 +42,8 @@
         "image-name": "imgs/skills/processing.png",
         "tags": [
             "Processing",
-            "Incomplete"
+            "Incomplete",
+            "Web"
         ]
     },
     "obliviousengine": {
@@ -96,7 +98,8 @@
         "image-name": "imgs/skills/javascript.png",
         "tags": [
             "JavaScript",
-            "Games"
+            "Games",
+            "Web"
         ]
     },
     "jsgames": {
@@ -107,7 +110,8 @@
         "image-name": "imgs/logos/hangman.png",
         "tags": [
             "Processing",
-            "Games"
+            "Games",
+            "Web"
         ]
     },
     "website": {
