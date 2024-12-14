@@ -267,8 +267,8 @@
             let writeupLink = accessor["writeup-link"];
             if (writeupLink) {
                 liElement.classList.add("selectableLink");
+                liElement.setAttribute("onclick", "location.href='" + writeupLink + "'");
             }
-            liElement.setAttribute("onclick", "location.href='" + writeupLink + "'");
             accessor["tags"].forEach(element => {
                 liElement.classList.add(element);
                 allTags.add(element);
