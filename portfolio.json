@@ -1,7 +1,7 @@
 {
     "epicchess": {
         "title": "Epic Chess",
-        "description": "Tom's Epic Chess, my A-Level Coursework. Not particularly demonstative of my skills.",
+        "description": "A-Level Coursework. Not very demonstative of my skills.",
         "writeup-link": "epicChess.html",
         "github-link": "https://github.com/ObliviousReality/TomsEpicChess",
         "image-name": "imgs/logos/epicchesslarge.png",
@@ -58,7 +58,7 @@
     },
     "indoorlocalisation": {
         "title": "Indoor Localisation",
-        "description": "My 4th Year Disseration, Indoor Localisation with Microbits.",
+        "description": "4th Year Disseration. Indoor Localisation with Microbits.",
         "writeup-link": "",
         "github-link": "https://github.com/ObliviousReality/Microbit-Indoor-Localisation",
         "image-name": "imgs/logos/microbit.png",
@@ -69,7 +69,7 @@
     },
     "apr": {
         "title": "Machine Learning in APR",
-        "description": "My 3rd Year Disseration, Classification in Automated Program Repair.",
+        "description": "3rd Year Disseration, Classification in Automated Program Repair.",
         "writeup-link": "",
         "github-link": "",
         "image-name": "imgs/logos/weka.png",
