@@ -264,7 +264,11 @@
         function createPortfolioElement(element, data) {
             let accessor = data[element]
             let liElement = document.createElement("li");
-            liElement.setAttribute("onclick", "location.href='" + accessor["writeup-link"] + "'");
+            let writeupLink = accessor["writeup-link"];
+            if (writeupLink) {
+                liElement.classList.add("selectableLink");
+            }
+            liElement.setAttribute("onclick", "location.href='" + writeupLink + "'");
             accessor["tags"].forEach(element => {
                 liElement.classList.add(element);
                 allTags.add(element);

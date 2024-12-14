@@ -200,6 +200,10 @@ html {
     background-color: red;
 }
 
+.selectableLink {
+    cursor: pointer;
+}
+
 .portf>ul {
     display: grid;
     grid-template-columns: repeat(1, minmax(100%, 1fr));
