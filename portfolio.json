@@ -34,18 +34,6 @@
             "Games"
         ]
     },
-    "processing": {
-        "title": "Processing Apps",
-        "description": "A few simple apps in processing, including a Sudoku Solver.",
-        "writeup-link": "processing.html",
-        "github-link": "https://github.com/ObliviousReality/SudokoSolver",
-        "image-name": "imgs/skills/processing.png",
-        "tags": [
-            "Processing",
-            "Incomplete",
-            "Web"
-        ]
-    },
     "obliviousengine": {
         "title": "The Oblivious Engine",
         "description": "A C++ 2D Game Engine.",
