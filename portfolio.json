@@ -79,7 +79,7 @@
         ]
     },
     "hangman": {
-        "title": "Games!",
+        "title": "JS Games!",
         "description": "A selection of Games written in JavaScript.",
         "writeup-link": "JS-Games/games.html",
         "github-link": "https://github.com/ObliviousReality/ObliviousHangman",
