@@ -109,5 +109,16 @@
             "Processing",
             "Games"
         ]
+    },
+    "website": {
+        "title": "This Website",
+        "description": "This website is completely hand written!",
+        "writeup-link": "www.obliviousreality.co.uk",
+        "github-link": "https://github.com/ObliviousReality/ObliviousReality.github.io",
+        "image-name": "imgs/skills/html.png",
+        "tags": [
+            "Web",
+            "JavaScript"
+        ]
     }
 }
