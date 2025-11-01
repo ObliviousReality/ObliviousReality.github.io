@@ -8,6 +8,3 @@
 [submodule "JS-Games"]
 	path = JS-Games
 	url = https://github.com/ObliviousReality/JS-Games.git
-[submodule "ASOSWrapped2024"]
-	path = ASOSWrapped2024
-	url = https://github.com/ObliviousReality/ASOSWrapped2024.git
